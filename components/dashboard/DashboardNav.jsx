@@ -1,0 +1,32 @@
+"use client";
+
+import { useUser, SignedIn, UserButton } from "@clerk/nextjs";
+import Image from "next/image";
+import Link from "next/link";
+
+import "../../app/globals.css";
+
+const DashboardNav = () => {
+    const { isSignedIn, user } = useUser();
+    if(!isSignedIn) {
+      return null;
+    }
+
+  return (
+    <div className="gradient_dark p-4 flex justify-between items-center rounded-br-lg">
+        <div className="text-white text-lg font-semibold">
+            <h3>Welcome, {user.firstName}</h3>
+        </div>
+        <div className="flex items-center">
+            <div className="overflow-hidden">
+                <SignedIn>
+                    {/* Mount the UserButton component */}
+                    <UserButton />
+                </SignedIn>
+            </div>
+        </div>
+    </div>
+  );
+}
+
+export default DashboardNav;

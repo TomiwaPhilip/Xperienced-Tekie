@@ -14,10 +14,10 @@ const Nav = () => {
       {/* Desktop Navigation */}
       <div className="container mx-auto">
         <div className="max-sm:hidden flex justify-between items-center">
-          <div className="text-black font-bold text-2xl">
+          <div className="text-black font-[900] text-2xl">
             Logo
           </div>
-          <ul className="flex space-x-4 gap-4">
+          <ul className="flex space-x-4 gap-4 font-semibold">
             <Link href="/" className="p-3">
               Home   
             </Link>
@@ -25,11 +25,11 @@ const Nav = () => {
               About Us  
             </Link>
             {user? (
-              <Link href="/dashboard" className="rounded-full gradient_dark text-white p-3">
+              <Link href="/dashboard" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 Dashboard 
               </Link>
             ):(
-              <Link href="/sign-in" className="rounded-full gradient_dark text-white p-3">
+              <Link href="/sign-in" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 Sign In 
               </Link>
             )}
@@ -72,24 +72,18 @@ const Nav = () => {
                 About Us  
               </Link>
               <br />
-              <Link href="/" 
-                className=""
-                onClick={() => {
-                  setIsMenuOpen(false);
-                }}
-              >
-                Sign In 
-              </Link>
+              {user? (
+                <Link href="/dashboard" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                  Dashboard 
+                </Link>
+               ):(
+                <Link href="/sign-in" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                 Sign In 
+                </Link>
+            )}
             </ul>
           )}
-
-
       </div>
-
-
-
-      
-
     </nav>
   )
 }
