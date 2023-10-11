@@ -1,7 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 
 import DashboardNav from "../../../components/dashboard/DashboardNav";
-import SideBar from "../../../components/dashboard/SideBar";
 import "../../globals.css";
 
 export const metadata = {
@@ -9,7 +8,7 @@ export const metadata = {
   description: "My Dashboard",
 }
 
-const Dashboardlayout = ({ children }) => {
+const DashboardLayout = ({ children }) => {
   return (
     <ClerkProvider>
         <html>
@@ -17,10 +16,11 @@ const Dashboardlayout = ({ children }) => {
               <nav>
                 <DashboardNav />
               </nav>
-              <SideBar />
-                <main className="main">
-                    { children }
-                </main>
+              {/* <SideBar /> */}
+              <main className="main">
+                { children }
+              </main>
+              {/* <BottomBar /> */}
             </body>
         </html>
     </ClerkProvider>
@@ -28,4 +28,4 @@ const Dashboardlayout = ({ children }) => {
   );
 }
 
-export default Dashboardlayout;
+export default DashboardLayout;

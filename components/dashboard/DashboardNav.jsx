@@ -13,7 +13,7 @@ const DashboardNav = () => {
     }
 
   return (
-    <div className="gradient_dark p-4 flex justify-between items-center rounded-br-lg">
+    <div className="gradient_dark p-4 flex justify-between items-center sm:rounded-br-lg max-sm:rounded-b-lg">
         <div className="text-white text-lg font-semibold">
             <h3>Welcome, {user.firstName}</h3>
         </div>

@@ -1,11 +1,11 @@
-"use client";
+import BarsContent from "../../../../components/dashboard/BarsContent";
 
 const dashboard = () => {
   return (
-    <div className='flex items-center justify-center'>
-      dashboard in development... check back later
+    <div className="">
+      <BarsContent />
     </div>
-  )
+  );
 }
 
-export default dashboard
+export default dashboard;
