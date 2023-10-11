@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
 
 const sendEmail = async (to, subject, text) => {
   const mailOptions = {
-    from: 'tomiwaphilip@gmail.com', // Replace with your email address
+    from: 'tomiwaphilip1100@gmail.com', // Replace with your email address
     to,
     subject,
     text,

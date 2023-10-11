@@ -6,7 +6,9 @@ import { authMiddleware } from "@clerk/nextjs";
 
 export default authMiddleware({
       // These routes will be accessible to all users
-      publicRoutes: ["/", "/about"],
+      publicRoutes: ["/", "/about", "/api/webhook/clerk"],
+
+      ignoredRoutes: ["/", "/about", "/api/webhook/clerk"]
     });
 
 export const config = {
