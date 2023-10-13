@@ -1,14 +1,31 @@
-import { SignIn } from "@clerk/nextjs";
- 
-const Page = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-    <div className="max-w-md w-full p-4">
-      <SignIn />
-    </div>
-  </div>
-  )
+"use client";
 
+import { useState, useEffect } from 'react';
+
+import SigningIn from "../../../../components/auth/SigningIn";
+import LoadingSkeleton from "../../../../components/shared/LoadingSkeleton"
+
+const Page = () => {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a delay using setTimeout
+    setTimeout(() => {
+      setLoading(false); // Hide loading skeleton after the delay
+    }, 4000); // Adjust the delay time (in milliseconds) as needed
+  }, []);
+
+  return (
+    <div className="">
+      {loading ? (
+        <LoadingSkeleton />
+      ) : (
+        <SigningIn />
+      )}
+    </div>
+
+  );
 }
 
 export default Page;
