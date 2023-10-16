@@ -16,11 +16,9 @@ const DashboardLayout = ({ children }) => {
               <nav>
                 <DashboardNav />
               </nav>
-              {/* <SideBar /> */}
               <main className="">
                 { children }
               </main>
-              {/* <BottomBar /> */}
             </body>
         </html>
     </ClerkProvider>

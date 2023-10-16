@@ -1,76 +1,69 @@
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,400&display=swap');
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,400&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: 'Satoshi', sans-serif;
-  }
+  font-family: "Satoshi", sans-serif;
+}
 
 .weight-900 {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .gradient {
-    background-image: radial-gradient(#ffffff, #ecf6f7);
+  background-image: radial-gradient(#ffffff, #ecf6f7);
 }
 
-.bg_white{
-    background-color: #ffffff;
+.bg_white {
+  background-color: #ffffff;
 }
 
 .gradient_dark {
-    background-image: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
-    color: #ffffff;
+  background-image: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+  color: #ffffff;
 }
 
 .sidebar_color {
-    background-image: linear-gradient(20deg, #feac5e, #c779d0, #4bc0c8);
-    color: #ffffff;
+  background-image: linear-gradient(20deg, #feac5e, #c779d0, #4bc0c8);
+  color: #ffffff;
 }
 
 .gradient_text {
-    color: transparent; /* Make the text transparent */
-    -webkit-background-clip: text; /* For older versions of webkit browsers */
-    background-clip: text;
-    background-image: linear-gradient(45deg, #feac5e, #c779d0, #4bc0c8);
-    background-size: 200% auto;
-    animation: gradient-animation 1s infinite;
+  color: transparent; /* Make the text transparent */
+  -webkit-background-clip: text; /* For older versions of webkit browsers */
+  background-clip: text;
+  background-image: linear-gradient(45deg, #feac5e, #c779d0, #4bc0c8);
+  background-size: 200% auto;
+  animation: gradient-animation 1s infinite;
 }
 @keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .main {
-    width: 100%;
-    min-height: 80vh;
+  width: 100%;
+  min-height: 80vh;
 }
 .my_btn {
-    @apply font-semibold p-4 mt-5 text-[24px] cursor-pointer gradient_dark rounded-full drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300
+  @apply font-semibold p-4 mt-5 text-[24px] cursor-pointer gradient_dark rounded-full drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300;
 }
 
 .animate-fade-in {
-    animation: fadeIn 3s;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  animation: fadeIn 3s;
+}
 
-  
-/* 
-.btn:hover {
-    background-color: white;
-    color: blue;
-} */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

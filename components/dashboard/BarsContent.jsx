@@ -3,14 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 
+import Projects from "../tabs/Projects";
+import Feedbacks from "../tabs/Feedbacks";
+import Message from "../tabs/Message";
+import Certification from "../tabs/Certification";
+
 const BarsContent = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section>
+    <section className="bg-gray-100 mt-[64px]">
       {/* Page content for desktop screens: SideBar and main page content goes here */}
       <div className="grid grid-cols-3 gap-4">
-        <aside className="sidebar_color p-4 text-white fixed w-[15%] h-[100vh] col-span-1 rounded-r-lg max-sm:hidden">
+        <aside className="sidebar_color p-4 text-white fixed lg:w-[15%] md:w-[20%] h-[100vh] col-span-1 rounded-r-lg max-sm:hidden">
           <nav>
             <ul>
               <li
@@ -262,11 +267,19 @@ const BarsContent = () => {
         </aside>
 
         {/* Content section ToDo for small screens */}
-        <div className="col-span-2 w-[85%] ml-[220px] mt-[30px] max-sm:hidden">
-          {activeTab == 0 && <p>This is the project page</p>}
-          {activeTab == 1 && <p>This is the feedbacks page</p>}
-          {activeTab == 2 && <p>This is the message page</p>}
-          {activeTab == 3 && <p>This is the certificate page</p>}
+        <div className="col-span-2 w-[85%] ml-[220px] mt-[30px] max-sm:hidden h-[100vh]">
+          {activeTab == 0 &&
+            <Projects />
+          }
+          {activeTab == 1 &&
+            <Feedbacks />
+          }
+          {activeTab == 2 &&
+            <Message />
+          }
+          {activeTab == 3 &&
+            <Certification />
+          }
         </div>
 
       </div>
@@ -274,12 +287,11 @@ const BarsContent = () => {
 
       {/* Navbar for small screens */}
 
-      <nav className="sidebar_color p-4 text-white fixed bottom-0 left-0 w-full rounded-t-lg sm:hidden">
+      <nav className="gradient_dark p-4 text-white fixed bottom-0 left-0 w-full rounded-t-lg sm:hidden">
         <ul className="flex justify-between items-center list-none p-0">
           <li
-            className={`${
-              activeTab == 0 ? "animate-pulse" : "text-white"
-            } mr-2`}
+            className={`${activeTab == 0 ? "animate-pulse" : "text-white"
+              } mr-2`}
             onClick={() => setActiveTab(0)}
           >
             <Link href="#" className="flex py-2">
@@ -347,9 +359,8 @@ const BarsContent = () => {
             </Link>
           </li>
           <li
-            className={`${
-              activeTab == 1 ? "animate-pulse" : "text-white"
-            } mr-2`}
+            className={`${activeTab == 1 ? "animate-pulse" : "text-white"
+              } mr-2`}
             onClick={() => setActiveTab(1)}
           >
             <Link href="#" className="flex py-2">
@@ -413,9 +424,8 @@ const BarsContent = () => {
             </Link>
           </li>
           <li
-            className={`${
-              activeTab == 2 ? "animate-pulse" : "text-white"
-            } mr-2`}
+            className={`${activeTab == 2 ? "animate-pulse" : "text-white"
+              } mr-2`}
             onClick={() => setActiveTab(2)}
           >
             <Link href="#" className="block py-2">
@@ -467,9 +477,8 @@ const BarsContent = () => {
             </Link>
           </li>
           <li
-            className={`${
-              activeTab == 3 ? "animate-pulse" : "text-white"
-            } mr-2`}
+            className={`${activeTab == 3 ? "animate-pulse" : "text-white"
+              } mr-2`}
             onClick={() => setActiveTab(3)}
           >
             <Link href="#" className="block py-2">
@@ -528,16 +537,19 @@ const BarsContent = () => {
       </nav>
 
       {/* Content section ToDo for small screens */}
-      <div className="mt-[30px] sm:hidden mx-[3vw]">
-        {activeTab == 0 && 
-          <div className="">
-            <p>This is the project page</p>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi provident, blanditiis dolorum eligendi facilis tempore beatae debitis dolore, rerum est saepe, cumque aspernatur. Commodi quia quis iure, repellat ab natus. </p>
-          </div>
-          }
-        {activeTab == 1 && <p>This is the feedbacks page</p>}
-        {activeTab == 2 && <p>This is the message page</p>}
-        {activeTab == 3 && <p>This is the certificate page</p>}
+      <div className="mt-[30px] sm:hidden mx-[3vw] h-[100vh]">
+        {activeTab == 0 &&
+          <Projects />
+        }
+        {activeTab == 1 &&
+          <Feedbacks />
+        }
+        {activeTab == 2 &&
+          <Message />
+        }
+        {activeTab == 3 &&
+          <Certification />
+        }
       </div>
     </section>
   );
