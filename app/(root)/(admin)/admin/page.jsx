@@ -1,9 +1,12 @@
-import React from 'react'
+import DashboardNav from '../../../../components/dashboard/DashboardNav';
 
-const page = () => {
+const Page = () => {
+
   return (
-    <div>page</div>
-  )
-}
+    <section>
+      <DashboardNav />
+    </section>
+  );
+};
 
-export default page
+export default Page;
