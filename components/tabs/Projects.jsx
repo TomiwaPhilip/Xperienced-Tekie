@@ -14,14 +14,12 @@ const Projects = () => {
       setLoading(false); // Hide loading skeleton after the delay
     }, 4000); // Adjust the delay time (in milliseconds) as needed
   }, []);
-
   return (
     <div>
       {loading ? (
         <LoadingSkeleton />
       ) : (
         <div className="">
-            <h3 className="font-[600] p-3 text-[30px] gradient_text">Let's get you set and going...!</h3>
           <Form />
         </div>
       )}
