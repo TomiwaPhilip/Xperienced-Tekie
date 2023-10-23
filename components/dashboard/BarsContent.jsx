@@ -4,8 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import Projects from "../tabs/Projects";
-import Feedbacks from "../tabs/Feedbacks";
-import Message from "../tabs/Message";
+import Payment from "../tabs/Payment";
 import Certification from "../tabs/Certification";
 
 const BarsContent = () => {
@@ -154,7 +153,7 @@ const BarsContent = () => {
               </li>
               <li
                 className={`${activeTab == 2 ? "text-black" : "text-white"}`}
-                onClick={() => setActiveTab(3)}
+                onClick={() => setActiveTab(2)}
               >
                 <Link href="#" className="block py-2">
                   <svg
@@ -216,9 +215,8 @@ const BarsContent = () => {
         {/* Content section ToDo for small screens */}
         <div className="col-span-2 w-[85%] ml-[220px] mt-[30px] max-sm:hidden h-[100vh]">
           {activeTab == 0 && <Projects />}
-          {activeTab == 1 && <Feedbacks />}
-          {activeTab == 2 && <Message />}
-          {activeTab == 3 && <Certification />}
+          {activeTab == 1 && <Payment />}
+          {activeTab == 2 && <Certification />}
         </div>
       </div>
 
@@ -366,7 +364,7 @@ const BarsContent = () => {
             className={`${
               activeTab == 2 ? "animate-pulse" : "text-white"
             } mr-2`}
-            onClick={() => setActiveTab(3)}
+            onClick={() => setActiveTab(2)}
           >
             <Link href="#" className="block py-2">
               <svg
@@ -426,7 +424,7 @@ const BarsContent = () => {
       {/* Content section ToDo for small screens */}
       <div className="mt-[30px] sm:hidden mx-[3vw] h-[100vh]">
         {activeTab == 0 && <Projects />}
-        {activeTab == 1 && <Feedbacks />}
+        {activeTab == 1 && <Payment />}
         {activeTab == 2 && <Certification />}
       </div>
     </section>
