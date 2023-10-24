@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
 
 const Form = () => {
   const [path, setPath] = useState("");
-  const router = useRouter();
   const { user } = useUser();
   const userId = user && user.id;
 
   const handleSubmit = async (e) => {
+    console.log(userId);
+    console.log(path);
     e.preventDefault();
     try {
       const response = await fetch("/api/formsubmission", {
@@ -19,7 +19,7 @@ const Form = () => {
         body: JSON.stringify({ userId, path }),
       });
       if (response.status === 201) {
-        router.reload();
+        window.location.reload();
       } else {
         alert("Error: Please try again later or contact support!");
       }

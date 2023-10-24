@@ -1,10 +1,18 @@
-const mongoose = require('mongoose');
+import { Schema, model, models } from "mongoose";
 
-const userSchema = new mongoose.Schema({
-  userId: String, // You can add more fields like email, name, etc.
-  path: String, // Internship path
+const userSchema = new Schema({
+  userId: {
+    type: String,
+    required: true,
+    unique: true
+  }, // You can add more fields like email, name, etc.
+  path: {
+    type: String,
+    required: true,
+    unique: true,
+  }, // Internship path
 });
 
-const User = mongoose.model('User', userSchema);
+const User = models.User || model("User", userSchema);
 
-module.exports = User;
+export default User;

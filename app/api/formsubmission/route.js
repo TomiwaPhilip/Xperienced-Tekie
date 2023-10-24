@@ -1,12 +1,12 @@
 import dbConnect from "../../../utils/database";
 import User from "../../../model/userForm";
 
-export default async function postHandler(req, res) {
-  if (req.method === "POST") {
+export const POST = async (request) => {
+  if (request.method === "POST") {
     try {
       await dbConnect();
 
-      const { userId, path } = req.body;
+      const { userId, path } = await request.json();
 
       const newUser = new User({
         userId,
@@ -15,13 +15,13 @@ export default async function postHandler(req, res) {
 
       await newUser.save();
 
-      res.status(201).json({ message: "User data saved successfully." });
+      return new Response(JSON.stringify(newUser), { status: 201 });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ error: "Error saving user data." });
+      return new Response("Error saving user details", { status: 500 });
     }
- } else {
+  } else {
     console.log(error);
-    res.status(405).json({ error: "Method not allowed" });
+    return new Response("Method not allowed", { status: 405 });
   }
-}
+};
