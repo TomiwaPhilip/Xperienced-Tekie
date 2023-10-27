@@ -29,6 +29,10 @@
     "npm install react-router-dom": {
       "name": "Install Dependencies",
       "command": "npm install react-router-dom"
+    },
+    "npm install axios": {
+      "name": "install axios",
+      "command": "npm install axios"
     }
   }
 }

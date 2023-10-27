@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import Link from "next/link";
-import { useState } from 'react';
+import Image from "next/image";
+import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
 
 const Nav = () => {
@@ -14,23 +15,32 @@ const Nav = () => {
       {/* Desktop Navigation */}
       <div className="container mx-auto">
         <div className="max-sm:hidden flex justify-between items-center">
-          <div className="text-black font-[900] text-2xl">
-            Logo
-          </div>
+          <Image
+            src={"/assets/images/logo.png"}
+            alt="logo"
+            width={50}
+            height={50}
+          />
           <ul className="flex space-x-4 gap-4 font-semibold">
             <Link href="/" className="p-3">
-              Home   
+              Home
             </Link>
             <Link href="/" className="p-3">
-              About Us  
+              About Us
             </Link>
-            {user? (
-              <Link href="/dashboard" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                Dashboard 
+            {user ? (
+              <Link
+                href="/dashboard"
+                className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              >
+                Dashboard
               </Link>
-            ):(
-              <Link href="/sign-in" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                Sign In 
+            ) : (
+              <Link
+                href="/sign-in"
+                className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              >
+                Sign In
               </Link>
             )}
           </ul>
@@ -38,54 +48,64 @@ const Nav = () => {
 
         {/* Mobile Navigation */}
         <div className="sm:hidden container flex justify-between p-3 items-center">
-          <div className="text-black font-bold text-2xl ">
-            Logo
-          </div>
-          <button 
-            type="button" 
+          <Image
+            src={"/assets/images/logo.png"}
+            alt="logo"
+            width={50}
+            height={50}
+          />
+          <button
+            type="button"
             className=""
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
             }}
-            >
+          >
             Menu
           </button>
-        
         </div>
         {isMenuOpen && (
-            <ul className="flex items-center gap-6 p-3 justify-between">
-              <Link href="/" 
-                className=""
-                onClick={() => {
-                  setIsMenuOpen(false);
-                }}
-                >
-                Home   
-              </Link>
-              <br />
-              <Link href="/" 
-                className=""
-                onClick={() => {
-                  setIsMenuOpen(false);
-                }}
+          <ul className="flex items-center gap-6 p-3 justify-between">
+            <Link
+              href="/"
+              className=""
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+            >
+              Home
+            </Link>
+            <br />
+            <Link
+              href="/"
+              className=""
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+            >
+              About Us
+            </Link>
+            <br />
+            {user ? (
+              <Link
+                href="/dashboard"
+                className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               >
-                About Us  
+                Dashboard
               </Link>
-              <br />
-              {user? (
-                <Link href="/dashboard" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                  Dashboard 
-                </Link>
-               ):(
-                <Link href="/sign-in" className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                 Sign In 
-                </Link>
+            ) : (
+              <Link
+                href="/sign-in"
+                className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              >
+                Sign In
+              </Link>
             )}
-            </ul>
-          )}
+          </ul>
+        )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
 export default Nav;
