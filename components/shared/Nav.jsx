@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import IconMenu from "../../public/assets/images/icon-menu.svg";
 import Image from "next/image";
 import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
@@ -61,7 +62,7 @@ const Nav = () => {
               setIsMenuOpen(!isMenuOpen);
             }}
           >
-            Menu
+            <Image src={IconMenu} alt="logo" width={50} height={50} />
           </button>
         </div>
         {isMenuOpen && (

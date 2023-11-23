@@ -1,0 +1,127 @@
+.hero-section p{
+    color: var(--Neutral-900, #131216);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-section{
+    padding: 0 100px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading-2{
+    color:  #00234E;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.btn-signup{
+    border-radius: 12px;
+    border: 2px solid #131216;
+    background: #EB9ECC;
+    display: flex;
+    width: 185px;
+    height: 48px;
+    padding: 15px 17px;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-right{
+    position: relative;
+}
+
+.blue-accent-ellipse{
+    position: absolute;
+    bottom: -25px;
+    right: -30px;
+}
+
+.primary-color-ellipse{
+    position: absolute;
+    top: -25px;
+    left: 80px;
+}
+
+.white-color-ellipse{
+    position: absolute;
+    top: -25px;
+    right: 50px;
+    z-index: -1;
+}
+
+.pink-zigzag{
+    position: absolute;
+    z-index: -3;
+    top: -45px;
+    left: 150px;
+}
+
+@media screen and (max-width: 570px) {
+    .hero-section p{
+        text-align: center;
+    }
+
+    .heading-2{
+        text-align: center;
+    }
+
+    .hero-section{
+        flex-direction: column;
+        margin-bottom: 60px;
+        height: auto;
+        width: 328px;
+    }
+    
+    .hero-right{
+        margin-top: 6rem;
+    }
+
+    .hero-right img{
+        width: 257px;
+    }
+
+    .hero-left{
+        align-items: center;
+    }
+    
+    .blue-accent-ellipse{
+        bottom: -25px;
+        right: 20px;
+    }
+    
+    .primary-color-ellipse{
+        top: -55px;
+        left: -5px
+    }
+    
+    .white-color-ellipse{
+        top: -25px;
+        right: 50px;
+    }
+    
+    .pink-zigzag{
+        top: -35px;
+        left: 0;
+    }
+  }

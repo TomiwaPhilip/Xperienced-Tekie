@@ -1,14 +1,40 @@
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,400&display=swap");
+/* @import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,400&display=swap"); */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Outfit:wght@400;700&family=Poppins:wght@400;500;800&display=swap');
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Satoshi", sans-serif;
+:root {
+  --Primary-Color-1: #00234E
+  --white: #ffffff;
 }
 
-.weight-900 {
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 100vw;
+  /* padding: 10px */
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+
+/* .weight-900 {
   font-weight: 900;
 }
 
@@ -28,17 +54,18 @@ body {
 .sidebar_color {
   background-image: linear-gradient(20deg, #feac5e, #c779d0, #4bc0c8);
   color: #ffffff;
-}
+} */
 
-.gradient_text {
-  color: transparent; /* Make the text transparent */
-  -webkit-background-clip: text; /* For older versions of webkit browsers */
+/* .gradient_text {
+  color: transparent; /* Make the text transparent 
+  -webkit-background-clip: text; /* For older versions of webkit browsers 
   background-clip: text;
   background-image: linear-gradient(45deg, #feac5e, #c779d0, #4bc0c8);
   background-size: 200% auto;
   animation: gradient-animation 1s infinite;
-}
-@keyframes gradient-animation {
+} */
+
+/* @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
   }
@@ -52,7 +79,8 @@ body {
   min-height: 80vh;
 }
 .my_btn {
-  @apply font-semibold p-4 mt-5 text-[24px] cursor-pointer gradient_dark rounded-full drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300;
+  @apply font-semibold p-4 mt-5 text-[30px] cursor-pointer gradient_dark rounded-full drop-shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300;
+
 }
 
 .animate-fade-in {
@@ -65,5 +93,33 @@ body {
   }
   to {
     opacity: 1;
+  }
+} */
+
+.btn-signup{
+  border-radius: 12px;
+  border: 2px solid #131216;
+  background: #EB9ECC;
+  display: flex;
+  width: 185px;
+  height: 48px;
+  padding: 15px 17px;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  flex-shrink: 0;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 570px) {
+  .content-width{
+    width: 328px;
+    margin: 0;
+  }
+
+  .heading-2{
+    font-size: 30px
   }
 }

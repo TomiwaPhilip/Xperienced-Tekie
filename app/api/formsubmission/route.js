@@ -5,7 +5,7 @@ export const POST = async (request) => {
   if (request.method === "POST") {
     try {
       await dbConnect();
-
+      // console.log("Connected to Atlas");
       const { userId, path } = await request.json();
 
       const newUser = new User({

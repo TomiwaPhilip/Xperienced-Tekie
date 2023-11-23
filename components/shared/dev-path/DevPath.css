@@ -1,0 +1,100 @@
+.dev-path{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 906px;
+        max-width: 100vw;
+        padding-top: 50px;
+        margin-top: 50px;
+        /* background-image: url('data:image/svg+xml,<svg width="390" height="1236" viewBox="0 0 390 1236" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M0 19C0 8.50658 8.50659 0 19 0H33.399C43.8924 0 52.399 8.50659 52.399 19V62.3827C52.399 72.8761 60.9056 81.3827 71.399 81.3827H319.578C330.071 81.3827 338.578 72.8761 338.578 62.3827V19C338.578 8.50657 347.085 0 357.578 0H375C385.493 0 394 8.50659 394 19V1217C394 1227.49 385.493 1236 375 1236H357.578C347.085 1236 338.578 1227.49 338.578 1217V1146.23C338.578 1135.74 330.071 1127.23 319.578 1127.23H71.399C60.9056 1127.23 52.399 1135.74 52.399 1146.23V1217C52.399 1227.49 43.8924 1236 33.399 1236H19C8.50661 1236 0 1227.49 0 1217V19Z" fill="%2300234E" /></svg>'); */
+        background-image: url('data:image/svg+xml,<svg width="1280" height="906" viewBox="0 0 1280 906" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 19C0 8.50659 8.50659 0 19 0H151.23C161.724 0 170.23 8.50659 170.23 19V40.6543C170.23 51.1477 178.737 59.6543 189.23 59.6543H1080.95C1091.44 59.6543 1099.95 51.1477 1099.95 40.6543V19C1099.95 8.5066 1108.46 0 1118.95 0H1261C1271.49 0 1280 8.50659 1280 19V887C1280 897.493 1271.49 906 1261 906H1118.95C1108.46 906 1099.95 897.493 1099.95 887V845.272C1099.95 834.779 1091.44 826.272 1080.95 826.272H189.23C178.737 826.272 170.23 834.779 170.23 845.272V887C170.23 897.493 161.724 906 151.23 906H19C8.50661 906 0 897.493 0 887V19Z" fill="%2300234E"/></svg>');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .paths{
+        display: flex;
+        justify-content: space-around;
+        gap: 100px;
+    }
+    
+    .dev-path h2{
+        color: #FFF;
+        text-align: center;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+    
+    .path-container{
+        display: flex;
+        width: 400px;
+        height: 320px; 
+        padding: 48px 25px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    
+    .path-container h3{
+        font-size: 18px;
+        font-weight: 500
+    }
+
+@media screen and (max-width: 570px) {
+    .dev-path{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-evenly; */
+        height: 1236px;
+        max-width: 100vw;
+        padding-top: 15px;
+        margin-top: 50px;
+        background-image: url('data:image/svg+xml,<svg width="390" height="1236" viewBox="0 0 390 1236" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M0 19C0 8.50658 8.50659 0 19 0H33.399C43.8924 0 52.399 8.50659 52.399 19V62.3827C52.399 72.8761 60.9056 81.3827 71.399 81.3827H319.578C330.071 81.3827 338.578 72.8761 338.578 62.3827V19C338.578 8.50657 347.085 0 357.578 0H375C385.493 0 394 8.50659 394 19V1217C394 1227.49 385.493 1236 375 1236H357.578C347.085 1236 338.578 1227.49 338.578 1217V1146.23C338.578 1135.74 330.071 1127.23 319.578 1127.23H71.399C60.9056 1127.23 52.399 1135.74 52.399 1146.23V1217C52.399 1227.49 43.8924 1236 33.399 1236H19C8.50661 1236 0 1227.49 0 1217V19Z" fill="%2300234E" /></svg>');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .paths{
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    .dev-path h2{
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+    
+    .path-container{
+        display: flex;
+        width: 261px;
+        height: 384px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        margin-bottom: 50px;
+        font-size: 14px;
+    }
+    
+    .path-container h3{
+        font-size: 18px;
+        font-weight: 500
+    }
+  }

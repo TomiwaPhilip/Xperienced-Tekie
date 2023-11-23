@@ -1,0 +1,83 @@
+.mentorship-section{
+    padding: 25px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mentorship-left{
+    width: 499px;
+}
+
+.mentorship-left p{
+    margin-bottom: 15px;
+}
+
+.mentorship-right{
+    position: relative;
+}
+
+.blue-ellipse{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 570px) {
+
+    .mentorship-section{
+        max-width: 100vw;
+        flex-direction: column;
+        /* margin-bottom: 60px; */
+        margin-top: 50px;
+        
+    }
+
+    .mentorship-section h2{
+        color: #03387A; 
+    }
+    
+    .mentorship-section p{
+        color: #000;
+        font-family: EB Garamond;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700; 
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+
+    .mentorship-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 328px;
+    }
+    
+    .blue-ellipse{
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        z-index: -1;
+    }
+    
+
+
+    .btn-signup{
+        border-radius: 12px;
+        border: 2px solid #131216;
+        background: #EB9ECC;
+        display: flex;
+        width: 185px;
+        height: 48px;
+        padding: 15px 17px;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        flex-shrink: 0;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 12px;
+      }
+  }

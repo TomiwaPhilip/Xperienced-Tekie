@@ -1,5 +1,5 @@
 import { SignIn } from "@clerk/nextjs";
- 
+
 const SigningIn = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -8,6 +8,6 @@ const SigningIn = () => {
       </div>
     </div>
   );
-}
+};
 
 export default SigningIn;

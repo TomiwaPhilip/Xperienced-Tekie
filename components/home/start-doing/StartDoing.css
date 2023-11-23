@@ -1,0 +1,230 @@
+.start-doing{
+    font-family: 'Poppins';
+    display: flex;
+    padding: 30px 100px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #00234E;
+    color: white;
+    gap: 10rem;
+}
+
+.start-left h2{
+    height: 95px;
+    flex-shrink: 0;
+    align-self: stretch;
+    color: var(--Pink-Accent-3, #FFF8FA);
+    font-family: Poppins;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.start-left p{
+    margin-bottom: 15px;
+    color: #FFF8FA;
+    /* font-family: EB Garamond; */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.start-right{
+    border-radius: 10px;
+    background-color: #FFF;
+    width: 328px;
+    padding: 30px 0;
+}
+
+.start-right p {
+    color: #444;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.start-right a{
+    color: #00234E;
+    font-weight: 600;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+}
+
+.form-container button{
+    cursor: pointer;
+}
+.form-input {
+    color: #000;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.form-input input{
+    width: 300px;
+    height: 45px;
+    border-radius: 7px;
+    display: block;
+    color: #00234E;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.name-input input{
+    width: 140px;
+}
+
+.name-input{
+    display: flex;
+    gap: 20px;
+}
+
+.social-signin-btn{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    color: #444;
+    border: 1px solid;
+    border-radius: 10px;
+    /* padding: 15px 5px; */
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.create-account-btn{
+    width: 300px;
+    background-color: #00234E;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+@media screen and (max-width: 570px) {
+.start-doing{
+    /* z-index: -1; */
+    display: flex;
+    width: 100vw;
+    height: 996px;
+    /* padding: 20px 45px 0px 45px; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    flex-shrink: 0;
+    background-color: #00234E;
+    color: white;
+}
+
+.start-left h2{
+    height: 95px;
+    flex-shrink: 0;
+    align-self: stretch;
+    color: var(--Pink-Accent-3, #FFF8FA);
+    text-align: center;
+
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 35px;
+}
+
+.start-left p{
+    margin-bottom: 35px;
+    color: #FFF8FA;
+
+    /* Para 2 */
+    /* font-family: EB Garamond; */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.start-right{
+    border-radius: 10px;
+    background-color: #FFF;
+    width: 328px;
+    padding: 30px 0;
+}
+
+.start-right p {
+    color: #444;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.start-right a{
+    color: #00234E;
+    font-weight: 600;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+}
+
+.form-container button{
+    cursor: pointer;
+}
+.form-input {
+    color: #000;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.form-input input{
+    width: 300px;
+    height: 45px;
+    border-radius: 7px;
+    display: block;
+    color: #00234E;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.name-input input{
+    width: 140px;
+}
+
+.name-input{
+    display: flex;
+    gap: 20px;
+}
+
+.social-signin-btn{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    color: #444;
+    border: 1px solid;
+    border-radius: 10px;
+    /* padding: 15px 5px; */
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.create-account-btn{
+    width: 300px;
+    background-color: #00234E;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+}
+}

@@ -6,9 +6,9 @@ import { authMiddleware } from "@clerk/nextjs";
 
 export default authMiddleware({
   // These routes will be accessible to all users
-  publicRoutes: ["/", "/about", "/api/formsubmission"],
+  publicRoutes: ["/", "/about", "/terms", "/api/getformdetails/:userId", "/api/user-details", "/api/user-details/:userId", "/api/formsubmission"],
 
-  ignoredRoutes: ["/", "/about", "/api/formsubmission"],
+  // ignoredRoutes: ["/", "/about", "/api/formsubmission"],
 });
 
 export const config = {
