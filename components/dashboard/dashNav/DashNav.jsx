@@ -18,10 +18,10 @@ const DashNav = () => {
       </div>
       <div className="flex items-center">
         <div className="overflow-hidden">
-          <SignedIn>
-            {/* Mount the UserButton component */}
-            <UserButton />
-          </SignedIn>
+          {/* <SignedIn> */}
+          {/* Mount the UserButton component */}
+          <UserButton />
+          {/* </SignedIn> */}
         </div>
       </div>
     </nav>

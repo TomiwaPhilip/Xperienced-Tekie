@@ -2,10 +2,10 @@
     display: flex;
     width: 100vw;
     height: 91px;
-    /* padding: 0px 9px; */
-    justify-content: space-around;
+    padding: 0px 30px;
+    justify-content: space-between;
     align-items: center;
-    gap: 921px;
+    /* gap: 921px; */
     border-radius: 0px 0px 10px 0px;
     background-color: #00234E;
     flex-shrink: 0;
