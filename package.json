@@ -11,8 +11,9 @@
   "dependencies": {
     "@clerk/nextjs": "^4.25.3",
     "axios": "^1.5.1",
+    "eslint-config-next": "^14.0.3",
     "mongoose": "^7.6.0",
-    "next": "13.5.4",
+    "next": "^14.0.3",
     "nodemailer": "^6.9.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

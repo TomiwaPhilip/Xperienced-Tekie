@@ -33,6 +33,14 @@
     "npm install axios": {
       "name": "install axios",
       "command": "npm install axios"
+    },
+    "npm update": {
+      "name": "update",
+      "command": "npm update"
+    },
+    "npm i next@latest react@latest react-dom@latest eslint-config-next@latest": {
+      "name": "update next",
+      "command": "npm i next@latest react@latest react-dom@latest eslint-config-next@latest"
     }
   }
 }
