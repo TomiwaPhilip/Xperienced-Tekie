@@ -2,15 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-// import { SignUp } from "@clerk/nextjs";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+import { useSignUp } from "@clerk/nextjs";
 
 import "./StartDoing.css";
 // import LoadingSkeleton from "../../shared/LoadingSkeleton";
 // import SigningUp from "../../auth/SigningUp";
 
 const StartDoing = () => {
-  // const [loading, setLoading] = useState(true);
+  const { isLoaded, signUp, setActive } = useSignUp();
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
+  const [pendingVerification, setPendingVerification] = useState(false);
+  const [code, setCode] = useState("");
+  const router = useRouter();
 
   // useEffect(() => {
   //   // Simulate a delay using setTimeout
@@ -18,6 +27,62 @@ const StartDoing = () => {
   //     setLoading(false); // Hide loading skeleton after the delay
   //   }, 4000); // Adjust the delay time (in milliseconds) as needed
   // }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!isLoaded) {
+      return;
+    }
+
+    // if (firstName && lastName && email && password) {
+    try {
+      await signUp.create({
+        email_address: email,
+        first_name: firstName,
+        password: password,
+        last_name: lastName,
+      });
+
+      //Send email
+      await signUp.prepareEmailAddressVerification({
+        strategy: "email_code",
+      });
+
+      //Change UI
+      setPendingVerification(true);
+      // setFirstName("");
+      // setLastName("");
+      // setEmail("");
+      // setPassword("");
+    } catch (error) {
+      console.log(error);
+    }
+    // }
+  };
+
+  const onPressVerify = async (e) => {
+    e.preventDefault();
+    if (!isLoaded) {
+      return;
+    }
+
+    try {
+      const completeSignUp = await signUp.attemptEmailAddressVerification({
+        code,
+      });
+      if (completeSignUp.status !== "complete") {
+        // investigate issue to see if there is an error or user needs to complete more step
+        console.log(JSON.stringify(completeSignUp, null, 2));
+      }
+      if (completeSignUp.status === "complete") {
+        await setActive({ session: completeSignUp.createdSessionId });
+        router.push("/dashboard");
+      }
+    } catch (error) {
+      console.log(JSON.stringify(error, null, 2));
+    }
+  };
 
   return (
     <div className="start-doing">
@@ -32,16 +97,15 @@ const StartDoing = () => {
         <p>Sign Up Now!</p>
       </div>
 
-      {/* {loading ? <LoadingSkeleton /> : <SigningUp />} */}
       <div className="content-width start-right">
         <div className="form-container">
           <Image
-            src={"/assets/images/logo.png"}
+            src={"/assets/images/X.png"}
             alt="logo"
             width={50}
             height={50}
           />
-          <button className="social-signin-btn">
+          <button className=" hover:bg-blue-900 hover:text-white social-signin-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 48 48"
@@ -67,7 +131,7 @@ const StartDoing = () => {
             </svg>
             Sign in with Google
           </button>
-          <button className="social-signin-btn">
+          <button className=" hover:bg-blue-900 hover:text-white social-signin-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 48 48"
@@ -85,30 +149,80 @@ const StartDoing = () => {
             </svg>
             Sign in with Facebook
           </button>
-          <form action="">
-            <div className="name-input">
-              <div className="form-input">
-                <label>First name</label>
-                <input type="text" />
-              </div>
-              <div className="form-input">
-                <label>Last name</label>
-                <input type="text" />
-              </div>
+          {!pendingVerification && (
+            <div>
+              <form onSubmit={handleSubmit}>
+                <div className="name-input">
+                  <div className="form-input">
+                    <label>First name</label>
+                    <input
+                      className="px-5"
+                      type="text"
+                      placeholder="First Name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                    />
+                  </div>
+                  <div className="form-input">
+                    <label>Last name</label>
+                    <input
+                      className="px-5"
+                      type="text"
+                      placeholder="Last Name"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                    />
+                  </div>
+                </div>
+                <div className="form-input">
+                  <label>Email</label>
+                  <input
+                    className="px-5"
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="form-input">
+                  <label>Password</label>
+                  <input
+                    className="px-5"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+                <button className="create-account-btn">Create account</button>
+              </form>
+              <p>
+                Already have an account? <Link href="/sign-in">Sign In</Link>{" "}
+              </p>
             </div>
-            <div className="form-input">
-              <label>Email</label>
-              <input type="email" />
+          )}
+          {pendingVerification && (
+            <div>
+              <p className="font-medium">
+                Verification code has been sent to your email
+              </p>
+              <form className="space-y4 md:space-y6">
+                <input
+                  value={code}
+                  onChange={(e) => setCode(e.target.value)}
+                  placeholder="Enter Verification code"
+                  className="bg-gray-50 border p-1 my-2 border-gray-300 text-gray-900 sm:text:sm rounded-lg block w-full p-225"
+                />
+                <button
+                  type="submit"
+                  onClick={onPressVerify}
+                  className="w-full text-white bg-blue-900 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+                >
+                  Verify Email
+                </button>
+              </form>
             </div>
-            <div className="form-input">
-              <label>Password</label>
-              <input type="password" />
-            </div>
-            <button className="create-account-btn">Create account</button>
-          </form>
-          <p>
-            Already have an account? <Link href="/sign-in">Sign In</Link>{" "}
-          </p>
+          )}
         </div>
       </div>
     </div>

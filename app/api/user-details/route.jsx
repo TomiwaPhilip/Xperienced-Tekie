@@ -12,7 +12,7 @@ export async function GET(req) {
 
   //   console.log(request.query);
 
-  // const users = await User.find({});
+  const users = await User.find({});
   //   const user = await User.findOne({ userId: req.query }).in("users");
   //   const user = await User.findOne({ userId: request.query.params }).exec();
 
