@@ -1,11 +1,11 @@
 import "./SideBar.css";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = ({ onClick }) => {
   return (
     <footer className="w-full bg-blue-950 text-white flex h-20 items-center justify-around">
       <Link href="#">
-        <div className="flex">
+        <div onClick={() => onClick("project")} className="flex">
           <svg
             width="25"
             height="26"
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
       </Link>
       <Link href="#">
-        <div className="sidebar-2">
+        <div onClick={() => onClick("payment")} className="sidebar-2">
           <svg
             width="25"
             height="26"
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
       </Link>
       <Link href="#">
-        <div className="sidebar-3">
+        <div onClick={() => onClick("certificate")} className="sidebar-3">
           <svg
             width="25"
             height="26"

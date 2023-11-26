@@ -20,11 +20,27 @@ import CertDownloadForm from "./../../CertDownloadForm";
 const MainView = () => {
   const [pathChosen, setPathChosen] = useState("");
   const [userExist, setUserExists] = useState(false);
-  const [project, setProject] = useState(false);
+  const [project, setProject] = useState(true);
   const [payments, setPayments] = useState(false);
   const [certificate, setCertificate] = useState(false);
 
-  const handleNav = () => {};
+  const handleNav = (id) => {
+    if (id === "project") {
+      setProject(true);
+      setPayments(false);
+      setCertificate(false);
+    }
+    if (id === "payment") {
+      setProject(false);
+      setPayments(true);
+      setCertificate(false);
+    }
+    if (id === "certificate") {
+      setProject(false);
+      setPayments(false);
+      setCertificate(true);
+    }
+  };
 
   const { user } = useUser();
   const userId = user && user.id;
@@ -50,22 +66,22 @@ const MainView = () => {
   return (
     <main className="main-container">
       <div className="hidden  sm:block aside">
-        <SideBar />
+        <SideBar onClick={handleNav} />
       </div>
       <div className="main-content">
         <section className="">
-          {pathChosen === "fullstack" && <FullstackCard />}
-          {pathChosen === "frontend" && <FrontendCard />}
-          {pathChosen === "backend" && <BackendCard />}
-          {pathChosen === "" && <Form />}
-          {/* <Payments /> */}
-          {/* <CertDownload /> */}
+          {project && pathChosen === "fullstack" && <FullstackCard />}
+          {project && pathChosen === "frontend" && <FrontendCard />}
+          {project && pathChosen === "backend" && <BackendCard />}
+          {project && pathChosen === "" && <Form />}
+          {payments && <Payments />}
+          {certificate && <CertDownload />}
           {/* <PaymentSuccess /> */}
           {/* <CertDownloadForm /> */}
         </section>
       </div>
       <div className="sm:hidden footer">
-        <Footer />
+        <Footer onClick={handleNav} />
       </div>
     </main>
   );
