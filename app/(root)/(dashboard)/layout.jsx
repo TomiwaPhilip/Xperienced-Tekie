@@ -10,7 +10,7 @@ export const metadata = {
 
 const DashboardLayout = ({ children }) => {
   return (
-    <ClerkProvider>
+
       <html>
         <body>
           <main className="">
@@ -19,7 +19,6 @@ const DashboardLayout = ({ children }) => {
           </main>
         </body>
       </html>
-    </ClerkProvider>
   );
 };
 
