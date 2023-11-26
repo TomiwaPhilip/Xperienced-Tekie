@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
 
 import "./MainView.css";
@@ -45,12 +45,9 @@ const MainView = () => {
   const { user } = useUser();
   const userId = user && user.id;
 
-  const myuser = "JesusIsLord";
-
   const paths = ["frontend", "backend", "fullstack"];
 
   if (userId) {
-    // useEffect(() => {
     fetch(`/api/user-details/${userId}`)
       .then((res) => res.json())
       .then((data) => {
@@ -60,7 +57,6 @@ const MainView = () => {
         }
         console.log(pathChosen);
       });
-    // }, []);
   }
 
   return (
