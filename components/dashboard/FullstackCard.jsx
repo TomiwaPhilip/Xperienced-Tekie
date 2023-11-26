@@ -3,7 +3,7 @@ import DevCard from "./devCard/DevCard";
 
 const FullstackCard = () => {
   return (
-    <div className="dev-path-card">
+    <div className="">
       {/* <Card
         imageUrl={"/assets/images/fe.jpg"}
         imgAlt={"Fullstack_Stack"}

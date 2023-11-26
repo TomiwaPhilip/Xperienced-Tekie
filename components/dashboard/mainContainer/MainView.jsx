@@ -5,6 +5,7 @@ import { useUser } from "@clerk/nextjs";
 
 import "./MainView.css";
 import SideBar from "./../sidebar/SideBar";
+import Footer from "./../sidebar/DashboardFooter";
 import Form from "../../shared/Form";
 import "../../../app/globals.css";
 import FrontendCard from "../FrontendCard";
@@ -19,6 +20,12 @@ import CertDownloadForm from "./../../CertDownloadForm";
 const MainView = () => {
   const [pathChosen, setPathChosen] = useState("");
   const [userExist, setUserExists] = useState(false);
+  const [project, setProject] = useState(false);
+  const [payments, setPayments] = useState(false);
+  const [certificate, setCertificate] = useState(false);
+
+  const handleNav = () => {};
+
   const { user } = useUser();
   const userId = user && user.id;
 
@@ -42,21 +49,23 @@ const MainView = () => {
 
   return (
     <main className="main-container">
-      <div className="main-sidebar">
+      <div className="hidden  sm:block aside">
         <SideBar />
       </div>
-      <div className="main-view">
-        <section className="main-content">
-          {/* <section> */}
+      <div className="main-content">
+        <section className="">
           {pathChosen === "fullstack" && <FullstackCard />}
           {pathChosen === "frontend" && <FrontendCard />}
           {pathChosen === "backend" && <BackendCard />}
           {pathChosen === "" && <Form />}
-          <Payments />
-          <CertDownload />
-          <PaymentSuccess />
-          <CertDownloadForm />
+          {/* <Payments /> */}
+          {/* <CertDownload /> */}
+          {/* <PaymentSuccess /> */}
+          {/* <CertDownloadForm /> */}
         </section>
+      </div>
+      <div className="sm:hidden footer">
+        <Footer />
       </div>
     </main>
   );
