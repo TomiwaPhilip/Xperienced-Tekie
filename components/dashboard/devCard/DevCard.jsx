@@ -2,7 +2,7 @@ import "./DevCard.css";
 
 const DevCard = ({ heading, desc }) => {
   return (
-    <article className="w-[350px] bg-blue-950 text-white p-10 rounded-lg sm:w-[400px] md:w-[500px]">
+    <article className="mt-24 w-[300px] bg-blue-950 text-white p-10 rounded-lg sm:w-[500px] lg:w-[700px]">
       <h3 className="mb-4 font-bold text-2xl">{heading}</h3>
       <p className="mb-4 text-lg">{desc}</p>
       <ol className="list-decimal text-left">

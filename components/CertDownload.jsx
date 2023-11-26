@@ -2,7 +2,7 @@ import React from "react";
 
 const CertDownload = () => {
   return (
-    <section className="w-[350px] py-5 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center">
+    <section className="w-[300px] py-5 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center">
       <h2 className="font-[600] text-blue-950 text-2xl">
         Downlaod Certificate
       </h2>

@@ -68,7 +68,7 @@ const MainView = () => {
       <div className="hidden  sm:block aside">
         <SideBar onClick={handleNav} />
       </div>
-      <div className="main-content">
+      <div className="main-content md:h-[700px]">
         <section className="">
           {project && pathChosen === "fullstack" && <FullstackCard />}
           {project && pathChosen === "frontend" && <FrontendCard />}

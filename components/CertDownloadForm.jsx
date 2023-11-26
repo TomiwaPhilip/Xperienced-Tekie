@@ -5,7 +5,7 @@ const CertDownloadForm = () => {
   const [fullName, setFullName] = useState("");
   const [path, setPath] = useState("");
   return (
-    <div className="flex flex-col py-10 items-center w-[380px] border-4 border-blue-950  bg-pink-100 rounded-xl">
+    <div className="flex flex-col py-10 items-center w-[300px] border-4 border-blue-950  bg-pink-100 rounded-xl">
       <h3 className="font-[600] p-3 text-2xl text-blue-950 text-center">
         Congratulations!!!
       </h3>
