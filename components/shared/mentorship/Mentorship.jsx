@@ -24,10 +24,10 @@ const Mentorship = () => {
             />
           </svg>
         </div>
-        <div className="absolute -top-36 -right-40 sm:-top-20 ">
+        <div className="absolute -top-24 right-0 sm:-top-20 ">
           <svg
-            width="250"
-            height="250"
+            width="150"
+            height="150"
             viewBox="0 0 124 124"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
