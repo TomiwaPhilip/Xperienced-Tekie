@@ -4,7 +4,7 @@ import Button from "../button/Button";
 
 const DevPath = () => {
   return (
-    <div className="dev-path bg-blue-950 flex flex-col items-center py-12 gap-5">
+    <div className="dev-path w-full bg-blue-950 flex flex-col items-center py-12 gap-5">
       <h2>There is space for every developer...</h2>
       <div className="flex flex-col gap-5 sm:gap-24 md:flex-row md:justify-between">
         <Paths
