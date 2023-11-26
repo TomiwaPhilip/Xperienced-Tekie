@@ -5,9 +5,26 @@ import Button from "../button/Button";
 
 const Testimonials = () => {
   return (
-    <div className="testimonials-section">
+    <div className="relative testimonials-section">
+      <div className="absolute -left-52">
+        <svg
+          width="300"
+          height="300"
+          viewBox="0 0 124 124"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse
+            cx="47.0373"
+            cy="42.2507"
+            rx="46.9627"
+            ry="41.7493"
+            fill="#EB9ECC"
+          />
+        </svg>
+      </div>
       <div className="content-width testimonials-left">
-        <h2 className="heading-2">See what our interns said</h2>
+        <h2 className="heading-2 text-center">See what our interns said</h2>
         <div className="testimonial-slider"></div>
         <Button
           params={"btn-signup"}

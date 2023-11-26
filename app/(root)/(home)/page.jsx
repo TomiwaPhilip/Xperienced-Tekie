@@ -171,7 +171,7 @@ const Home = () => {
   // );
   // NEW FRONTEND
   return (
-    <div className="home-page">
+    <div className="home-page flex flex-col items-center">
       <Hero />
       <StartDoing />
       <Mentorship />

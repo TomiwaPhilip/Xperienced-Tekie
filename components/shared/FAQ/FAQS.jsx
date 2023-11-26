@@ -23,7 +23,7 @@ const FAQS = () => {
       <div className="content-width faqs-left">
         <h2 className="">Frequently asked questions (FAQs)</h2>
         {questions.map((q) => (
-          <FAQ question={q} key={q.index} />
+          <FAQ question={q} key={q} />
         ))}
       </div>
     </div>

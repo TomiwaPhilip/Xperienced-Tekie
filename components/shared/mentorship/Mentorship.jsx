@@ -3,11 +3,65 @@ import Image from "next/image";
 import mentorshipImage from "../../../public/assets/images/mentorship.png";
 import Button from "../button/Button";
 
-const Hero = () => {
+const Mentorship = () => {
   return (
-    <div className="mentorship-section">
-      <div className="content-width mentorship-left">
-        <h2 className="heading-2">Free Mentorship Access</h2>
+    <div className="mentorship-section relative flex-col md:flex-row py-20">
+      <div className="content-width  mentorship-left mb-10">
+        <div className="absolute -top-36 -left-40 sm:-top-24">
+          <svg
+            width="300"
+            height="300"
+            viewBox="0 0 124 124"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="47.0373"
+              cy="42.2507"
+              rx="46.9627"
+              ry="41.7493"
+              fill="#777"
+            />
+          </svg>
+        </div>
+        <div className="absolute -top-36 -right-40 sm:-top-20 ">
+          <svg
+            width="250"
+            height="250"
+            viewBox="0 0 124 124"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="47.0373"
+              cy="42.2507"
+              rx="46.9627"
+              ry="41.7493"
+              fill="#0bc1c8"
+            />
+          </svg>
+        </div>
+
+        <div className="absolute -top-[80px] sm:-top-[30px] left-[45%]">
+          <svg
+            width="70"
+            height="73"
+            viewBox="0 0 70 73"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M59.6216 70.0768L3.10333 29.1343L67.7338 2.79961L59.6216 70.0768Z"
+              stroke="#4BA3C5"
+              strokeWidth="3"
+            />
+          </svg>
+        </div>
+
+        <h2 className="heading-2 text-blue-950 pt-16">
+          {" "}
+          Free Mentorship Access
+        </h2>
         <p>
           Take charge of your future, Supercharge your career by building real
           world projects and collaborating with other developers.
@@ -21,7 +75,6 @@ const Hero = () => {
           projects.
         </p>
         <Button
-          params={"btn-signup"}
           name={"Sign Up Now"}
           svg={
             <svg
@@ -45,16 +98,16 @@ const Hero = () => {
                 <path
                   d="M6.5 12H17"
                   stroke="#000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />{" "}
                 <path
                   d="M12.9117 8L17.5 12L12.9117 16"
                   stroke="#000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />{" "}
               </g>
             </svg>
@@ -62,33 +115,17 @@ const Hero = () => {
           link={"/sign-up"}
         />
       </div>
-      <div className="content-width mentorship-right">
+      <div className="content-width mentorship-right pb-16">
         <Image
+          className="w-10/12 mt-10"
           src={mentorshipImage}
-          width={257.833}
-          height={169.731}
+          // width={}
+          // height={}
           alt="Picture of the author"
         />
-        <div className="blue-ellipse">
-          <svg
-            width="124"
-            height="124"
-            viewBox="0 0 124 124"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <ellipse
-              cx="47.0373"
-              cy="42.2507"
-              rx="46.9627"
-              ry="41.7493"
-              fill="#00234E"
-            />
-          </svg>
-        </div>
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default Mentorship;

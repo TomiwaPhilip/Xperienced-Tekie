@@ -1,4 +1,5 @@
 import "./DevPath.css";
+import "../../../app/globals.css";
 import Button from "../button/Button";
 const Paths = ({ color, backgroundColor, heading, description }) => {
   const style = {
@@ -6,8 +7,11 @@ const Paths = ({ color, backgroundColor, heading, description }) => {
     backgroundColor,
   };
   return (
-    <div className="path-container" style={style}>
-      <h3>{heading}</h3>
+    <div
+      className="w-[250px] p-5 rounded-lg flex flex-col items-center md:w-[300px] lg:w-[400px] "
+      style={style}
+    >
+      <h3 className="text-3xl mb-5">{heading}</h3>
       <p>{description}</p>
       <Button
         params={"btn-signup"}
@@ -34,16 +38,16 @@ const Paths = ({ color, backgroundColor, heading, description }) => {
               <path
                 d="M6.5 12H17"
                 stroke="#000"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />{" "}
               <path
                 d="M12.9117 8L17.5 12L12.9117 16"
                 stroke="#000"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />{" "}
             </g>
           </svg>

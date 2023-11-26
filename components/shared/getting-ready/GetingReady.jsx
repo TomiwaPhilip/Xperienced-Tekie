@@ -3,9 +3,9 @@ import Button from "../button/Button";
 
 const GetingReady = () => {
   return (
-    <div className="GetingReady-section">
-      <div className="content-width GetingReady-left">
-        <h2 className="">Ready to start this amazing journey with Us?</h2>
+    <div className="flex flex-col w-10/12 md:w-[600px] mt-5 text-white">
+      <div className="content-width bg-black flex flex-col items-center text-center p-5 rounded-lg">
+        <h2 className="mb-5">Ready to start this amazing journey with Us?</h2>
         <p>
           Click the sign up button now to join the next cohort and start
           building the next big product that the world needs! Or read the FAQs
@@ -37,16 +37,16 @@ const GetingReady = () => {
                 <path
                   d="M6.5 12H17"
                   stroke="#000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />{" "}
                 <path
                   d="M12.9117 8L17.5 12L12.9117 16"
                   stroke="#000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />{" "}
               </g>
             </svg>

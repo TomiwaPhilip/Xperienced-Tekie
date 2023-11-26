@@ -6,26 +6,28 @@ import LinkedIn from "../../../public/assets/images/linkedin-icon.png";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-upper">
+    <footer className="py-5 sm:px-5 flex flex-col gap-5 items-center ">
+      <div className="flex flex-col gap-5 sm:flex-row md:gap-28">
         <div>
-          <h2>MENU</h2>
-          <ul>
+          <h3 className="font-bold text-2xl text-blue-950">MENU</h3>
+          <ul className="text-lg">
             <li>Home</li>
             <li>About</li>
             <li>Terms and Conditions</li>
           </ul>
         </div>
         <div>
-          <h2>Internship Paths</h2>
-          <p>
+          <h3 className="font-bold text-2xl text-blue-950">Internship Paths</h3>
+          <p className="text-lg">
             Frontend Development Internship <br />
             Backend Development Internship
           </p>
         </div>
         <div>
-          <h2>Contact or follow us</h2>
-          <p>
+          <h3 className="font-bold text-2xl text-blue-950">
+            Contact or follow us
+          </h3>
+          <p className="text-lg">
             info@xperiencedtekie.pro <br />
             +2348120915599
           </p>
@@ -45,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="copyright">All rights reserved. Copyright 2023.</p>
+      <p className="text-blue-950">All rights reserved. Copyright 2023.</p>
     </footer>
   );
 };

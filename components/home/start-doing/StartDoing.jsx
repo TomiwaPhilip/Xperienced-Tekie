@@ -85,8 +85,8 @@ const StartDoing = () => {
   };
 
   return (
-    <div className="start-doing">
-      <div className="content-width start-left">
+    <div className="relative flex flex-col gap-10 py-24 bg-blue-950 items-center md:flex-row md:justify-around ">
+      {/* <div className="content-width start-left">
         <h2 className="">Start doing hard things...</h2>
         <p>Build real world projects.</p>
         <p>
@@ -95,6 +95,39 @@ const StartDoing = () => {
           done before!
         </p>
         <p>Sign Up Now!</p>
+      </div> */}
+
+      <div className="absolute top-5 left-3 md:hidden">
+        <svg
+          width="70"
+          height="70"
+          viewBox="0 0 48 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse cx="24" cy="24.5" rx="24" ry="24.5" fill="#F2F2F2" />
+        </svg>
+      </div>
+      <div className="hidden absolute top-10 left-32 md:block">
+        <svg
+          width="150"
+          height="150"
+          viewBox="0 0 48 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse cx="24" cy="24.5" rx="24" ry="24.5" fill="#F2F2F2" />
+        </svg>
+      </div>
+      <div className=" text-white text-center md:text-left md:w-1/2 md:px-1 px-5 space-y-5">
+        <h2 className="text-4xl font-extrabold">Start doing hard things...</h2>
+        <p className="text-2xl">Build real world projects.</p>
+        <p className="text-2xl">
+          Our internship experience provides you an opportunity to focus on
+          things that matters. Unlock your potential and do what you have never
+          done before!
+        </p>
+        <p className="text-2xl">Sign Up Now!</p>
       </div>
 
       <div className="content-width start-right">

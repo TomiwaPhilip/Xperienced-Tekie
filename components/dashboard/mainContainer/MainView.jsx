@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { useUser } from "@clerk/nextjs";
 
@@ -9,6 +10,11 @@ import "../../../app/globals.css";
 import FrontendCard from "../FrontendCard";
 import BackendCard from "../BackendCard";
 import FullstackCard from "../FullstackCard";
+
+import Payments from "./../../Payments";
+import CertDownload from "./../../CertDownload";
+import PaymentSuccess from "./../../PaymentSuccess";
+import CertDownloadForm from "./../../CertDownloadForm";
 
 const MainView = () => {
   const [pathChosen, setPathChosen] = useState("");
@@ -46,6 +52,10 @@ const MainView = () => {
           {pathChosen === "frontend" && <FrontendCard />}
           {pathChosen === "backend" && <BackendCard />}
           {pathChosen === "" && <Form />}
+          <Payments />
+          <CertDownload />
+          <PaymentSuccess />
+          <CertDownloadForm />
         </section>
       </div>
     </main>
