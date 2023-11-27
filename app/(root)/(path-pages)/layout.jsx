@@ -2,6 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import Nav from "../../../components/shared/Nav";
 import "../../globals.css";
+import Footer from "../../../components/shared/footer/Footer";
 
 export const metadata = {
   title: "Xperienced Tekie",
