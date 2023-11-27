@@ -62,7 +62,7 @@ const GetCertified = () => {
       </div>
       <div className="content-width get-certified-right">
         <Image
-          className="w-[800px] lg:w-[1100px] h-[550px] lg:h-[750px]"
+          className="w-full lg:w-full h-[550px] lg:h-[750px]"
           src={getCertifiedImage}
           // width={708}
           // height={842}
