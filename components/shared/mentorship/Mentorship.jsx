@@ -5,9 +5,9 @@ import Button from "../button/Button";
 
 const Mentorship = () => {
   return (
-    <div className="mentorship-section mx-auto relative flex-col md:flex-row py-20">
+    <div className="mentorship-section relative flex-col md:flex-row py-15">
       <div className="content-width mentorship-left mb-10 md:w-1/2 md:pr-10">
-        <h2 className="heading-2 text-blue-950 pt-16">
+        <h2 className="heading-2 text-blue-950 pt-16 pb-3">
           Free Mentorship Access
         </h2>
         <p>
