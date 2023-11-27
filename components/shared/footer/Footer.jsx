@@ -1,8 +1,9 @@
-import "./Footer.css";
+import Link from "next/link";
 import Image from "next/image";
 
 import Xlogo from "../../../public/assets/images/x-icon.png";
 import LinkedIn from "../../../public/assets/images/linkedin-icon.png";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -11,16 +12,15 @@ const Footer = () => {
         <div>
           <h3 className="font-bold text-2xl text-blue-950">MENU</h3>
           <ul className="text-lg">
-            <li>Home</li>
-            <li>About</li>
-            <li>Terms and Conditions</li>
+            <Link href="/"><li>Home</li></Link>
+            <Link href="/"><li>Terms and Conditions</li></Link>
           </ul>
         </div>
         <div>
           <h3 className="font-bold text-2xl text-blue-950">Internship Paths</h3>
           <p className="text-lg">
-            Frontend Development Internship <br />
-            Backend Development Internship
+            <Link href="/frontend-path">Frontend Development Internship </Link> <br />
+           <Link href="/backend-path"> Backend Development Internship </Link>
           </p>
         </div>
         <div>
@@ -28,7 +28,7 @@ const Footer = () => {
             Contact or follow us
           </h3>
           <p className="text-lg">
-            info@xperiencedtekie.pro <br />
+            admin@xperiencedtekie.pro <br />
             +2348120915599
           </p>
           <div className="social-icons-logo">
