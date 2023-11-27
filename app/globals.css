@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Outfit:wght@400;700&family=Poppins:wght@400;500;800&display=swap');
-@import '../node_modules/sal.js/dist/sal.css';
 
 @tailwind base;
 @tailwind components;
@@ -18,7 +17,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
+  background-color: #FFF8FA;
   overflow-x: hidden;
   margin: 0 auto;
   max-width: 100vw;
