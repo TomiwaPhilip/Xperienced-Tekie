@@ -14,7 +14,7 @@ import FAQS from "./../../../components/shared/FAQ/FAQS";
 
 const Home = () => {
   return (
-    <div className="home-page flex flex-col items-center">
+    <div className="">
       <Hero />
       <StartDoing />
       <Mentorship />

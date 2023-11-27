@@ -18,23 +18,6 @@ const StartBuilding = () => {
           Learn and see how we build real world projects that is accessible to
           everyone in the world!
         </p>
-        <div className="absolute -top-5  -left-[180px]">
-          <svg
-            width="300"
-            height="300"
-            viewBox="0 0 124 124"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <ellipse
-              cx="47.0373"
-              cy="42.2507"
-              rx="46.9627"
-              ry="41.7493"
-              fill="#fff"
-            />
-          </svg>
-        </div>
         <Button
           params={"btn-signup"}
           name={"Sign Up Now"}

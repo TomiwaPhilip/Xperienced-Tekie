@@ -4,8 +4,8 @@ import Button from "../button/Button";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center md:px-10">
-      <div className="space-y-5 text-center md:text-left px-5 mb-5 md:w-1/2">
+    <div className="flex flex-col md:flex-row justify-between items-center md:px-10 sm:flex-col">
+      <div className="space-y-5 text-center md:text-left px-5 mb-5 md:w-1/2 sm:w-full">
         <h2 className="text-5xl font-extrabold text-blue-950">
           Xperience. Build. Collaborate.
         </h2>
@@ -58,9 +58,9 @@ const Hero = () => {
           link={"/sign-up"}
         />
       </div>
-      <div className="flex items-center justify-center md:-z-10 ">
+      <div className="flex items-center justify-center md:-z-10 md:flex-grow-0 flex-grow">
         <Image
-          className="w-10/12"
+          className="w-full max-w-md"
           src={heroImage}
           width={800}
           height={800}
