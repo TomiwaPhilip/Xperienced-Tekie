@@ -10,17 +10,16 @@ import Partners from "./../../../components/shared/partners/Partners";
 import GetingReady from "./../../../components/shared/getting-ready/GetingReady";
 import StartBuilding from "./../../../components/shared/start-bulding/StartBuilding";
 import FAQS from "./../../../components/shared/FAQ/FAQS";
-import AnimateFramer from "../../../components/animation/AnimateFramer";
 
 const Home = () => {
   return (
     <div className="">
-      <AnimateFramer>
+
       <Hero
         h2 = {"Xperience. Build. Collaborate."}
         h3 = {"Xperience an internship that bridges the gap between you and your next job as a developer!"} 
       />
-      </AnimateFramer>
+  
       <StartDoing />
       <Mentorship />
       <DevPath />

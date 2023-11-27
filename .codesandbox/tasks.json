@@ -49,6 +49,14 @@
     "npm install react@latest react-dom@latest": {
       "name": "react",
       "command": "npm install react@latest react-dom@latest"
+    },
+    "npm install sal.js": {
+      "name": "sal",
+      "command": "npm install sal.js"
+    },
+    "npm prune": {
+      "name": "prune",
+      "command": "npm prune"
     }
   }
 }

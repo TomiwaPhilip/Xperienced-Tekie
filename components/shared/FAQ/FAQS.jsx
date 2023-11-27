@@ -3,6 +3,8 @@
 import { useState } from "react";
 
 import "./FAQS.css";
+import AnimateContent from "../AnimateContent";
+
 // import Button from "../button/Button";
 
 const FAQS = () => {
@@ -21,9 +23,13 @@ const FAQS = () => {
   return (
     <div className="faqs">
       <div className="content-width faqs-left">
-        <h2 className="">Frequently asked questions (FAQs)</h2>
+        <AnimateContent>
+          <h2 className="">Frequently asked questions (FAQs)</h2>
+        </AnimateContent>
         {questions.map((q) => (
-          <FAQ question={q} key={q} />
+          <AnimateContent>
+            <FAQ question={q} key={q} />
+          </AnimateContent>
         ))}
       </div>
     </div>
