@@ -1,10 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useUser } from "@clerk/nextjs";
+import Select from "react-select";
+import countryList from "react-select-country-list";
 
 import LoadingSkeleton from "./LoadingSkeleton";
+// import CountrySelector from "./../CountrySelector";
 
 const Form = () => {
+  const options = useMemo(() => countryList().getData(), []);
   const [loading, setLoading] = useState(true);
+  const [path, setPath] = useState("");
+  const [location, setLocation] = useState("");
+  const { user } = useUser();
+  const userId = user && user.id;
+
+  function handleChange(value) {
+    setLocation(value);
+    console.log(value.label);
+  }
 
   useEffect(() => {
     // Simulate a delay using setTimeout
@@ -13,13 +26,10 @@ const Form = () => {
     }, 4000); // Adjust the delay time (in milliseconds) as needed
   }, []);
 
-  const [path, setPath] = useState("");
-  const { user } = useUser();
-  const userId = user && user.id;
-
   const handleSubmit = async (e) => {
     console.log(userId);
     console.log(path);
+    console.log(location.label);
     e.preventDefault();
     try {
       const response = await fetch("/api/formsubmission", {
@@ -27,7 +37,7 @@ const Form = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ userId, path }),
+        body: JSON.stringify({ userId, path, location: location.label }),
       });
       if (response.status === 201) {
         window.location.reload();
@@ -74,6 +84,15 @@ const Form = () => {
                   Full Stack Web Development with Next.JS
                 </option>
               </select>
+              <label className="block text-gray-700 text-[20px] font-bold">
+                Country
+              </label>
+              <Select
+                className="p-2 border w-full border-gray-300 bg-white rounded"
+                options={options}
+                value={location}
+                onChange={handleChange}
+              />
               <button
                 type="submit"
                 className="flex text-white bg-blue-950 px-5 items-center rounded-lg"
