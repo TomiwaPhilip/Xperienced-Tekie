@@ -1,4 +1,3 @@
-import "./GetingReady.css";
 import Button from "../button/Button";
 
 const GetingReady = () => {
