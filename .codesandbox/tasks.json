@@ -41,6 +41,14 @@
     "npm i next@latest react@latest react-dom@latest eslint-config-next@latest": {
       "name": "update next",
       "command": "npm i next@latest react@latest react-dom@latest eslint-config-next@latest"
+    },
+    "npm install framer-motion": {
+      "name": "framer",
+      "command": "npm install framer-motion"
+    },
+    "npm install react@latest react-dom@latest": {
+      "name": "react",
+      "command": "npm install react@latest react-dom@latest"
     }
   }
 }
