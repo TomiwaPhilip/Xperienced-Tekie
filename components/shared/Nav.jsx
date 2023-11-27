@@ -22,7 +22,9 @@ export default function PrimaryNavbar() {
         </div>
         <div className="relative hidden md:block font-semibold">
           <ul className="flex gap-4 items-center">
-            <li className="cursor-pointer">Home</li>
+            <Link href="/">
+              <li className="cursor-pointer">Home</li>
+            </Link>
             <li
               onClick={() => setShowDropDown(!showDropDown)}
               className="flex items-center cursor-pointer"
@@ -50,27 +52,31 @@ export default function PrimaryNavbar() {
                 </li>
               </Link>
             ) : (
-              <Link href="/sign-up">
+              <Link href="/sign-in">
                 <li className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer">
-                  Sign Up
+                  Sign In
                 </li>
               </Link>
             )}
           </ul>
           {showDropDown && (
             <ul className="absolute z-20 top-10 left-10 bg-blue-900 text-white flex flex-col gap-2">
-              <li
-                onClick={() => setShowDropDown(!showDropDown)}
-                className="cursor-pointer hover:bg-blue-950 p-2"
-              >
-                Frontend Internship
-              </li>
-              <li
-                onClick={() => setShowDropDown(!showDropDown)}
-                className="cursor-pointer hover:bg-blue-950 p-2"
-              >
-                Backend Internship
-              </li>
+              <Link href="/frontend-path">
+                <li
+                  onClick={() => setShowDropDown(!showDropDown)}
+                  className="cursor-pointer hover:bg-blue-950 p-2"
+                >
+                  Frontend Internship
+                </li>
+              </Link>
+              <Link href="/backend-path">
+                <li
+                  onClick={() => setShowDropDown(!showDropDown)}
+                  className="cursor-pointer hover:bg-blue-950 p-2"
+                >
+                  Backend Internship
+                </li>
+              </Link>
             </ul>
           )}
         </div>
@@ -149,18 +155,22 @@ function MobileNav({ user, showDropDown, setShowDropDown, onClick }) {
         </li>
         {showDropDown && (
           <ul className="text-blue-200 flex flex-col gap-2">
-            <li
-              onClick={() => setShowDropDown(!showDropDown)}
-              className="cursor-pointer  hover:bg-blue-700 p-2"
-            >
-              Frontend Internship
-            </li>
-            <li
-              onClick={() => setShowDropDown(!showDropDown)}
-              className="cursor-pointer hover:bg-blue-700 p-2"
-            >
-              Backend Internship
-            </li>
+            <Link href="/frontend-path">
+              <li
+                onClick={() => setShowDropDown(!showDropDown)}
+                className="cursor-pointer  hover:bg-blue-700 p-2"
+              >
+                Frontend Internship
+              </li>
+            </Link>
+            <Link href="backend-path">
+              <li
+                onClick={() => setShowDropDown(!showDropDown)}
+                className="cursor-pointer hover:bg-blue-700 p-2"
+              >
+                Backend Internship
+              </li>
+            </Link>
           </ul>
         )}
         {user ? (
@@ -173,12 +183,12 @@ function MobileNav({ user, showDropDown, setShowDropDown, onClick }) {
             </li>
           </Link>
         ) : (
-          <Link href="/sign-up">
+          <Link href="/sign-in">
             <li
               onClick={onClick}
               className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer"
             >
-              Sign Up
+              Sign In
             </li>
           </Link>
         )}

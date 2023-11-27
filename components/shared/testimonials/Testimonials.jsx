@@ -2,16 +2,20 @@ import "./Testimonials.css";
 import Image from "next/image";
 // import getCertifiedImage from "../../../public/assets/images/mentorship.png";
 import Button from "../button/Button";
+import AnimateContent from "../AnimateContent";
 
 const Testimonials = () => {
   return (
     <div className="relative testimonials-section">
       <div className="testimonials-left">
+      <AnimateContent>
         <h2 className="heading-2 text-center">See what our interns said</h2>
+        </AnimateContent>
         <br />
         
         <div className="testimonial-slider"></div>
         <div className="other-ratings">
+        <AnimateContent>
           <div className="capterra">
             <div className="capterra-top">
               <svg
@@ -29,7 +33,9 @@ const Testimonials = () => {
             </div>
             <p>4.5 Star Rating</p>
           </div>
+          </AnimateContent>
 
+          <AnimateContent>
           <div className="trust-radius">
             <div className="trust-radius-top">
               <svg
@@ -156,10 +162,12 @@ const Testimonials = () => {
             </div>
             <p>4.5 Star Rating</p>
           </div>
+          </AnimateContent>
           
         </div>
 
         <br />
+        <AnimateContent>
         <Button
           params={"btn-signup"}
           name={"Sign Up Now"}
@@ -201,6 +209,7 @@ const Testimonials = () => {
           }
           link={"/sign-up"}
         />
+        </AnimateContent>
       </div>
     </div>
   );

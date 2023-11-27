@@ -14,7 +14,10 @@ import FAQS from ".././../../../components/shared/FAQ/FAQS";
 const Home = () => {
   return (
     <div className="">
-      <Hero />
+        <Hero
+        h2 = {"Xperience Backend Web Development Internship"}
+        h3 = {"Xperience an internship that bridges the gap between you and your next job as a backend web developer!"} 
+      />
       <StartDoing />
       <Mentorship />
       <DevPath />

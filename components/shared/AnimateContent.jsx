@@ -13,7 +13,7 @@ const AnimatedContent = ({ children }) => {
       ref={ref}
       className={`${
         inView ? 'animate-fade-in' : 'opacity-0'
-      } transition-opacity duration-500`}
+      } transition-opacity duration-1000`}
     >
       {children}
     </div>
