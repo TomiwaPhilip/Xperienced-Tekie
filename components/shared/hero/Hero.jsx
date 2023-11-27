@@ -2,17 +2,16 @@ import Image from "next/image";
 import heroImage from "../../../public/assets/images/main-hero.png";
 import Button from "../button/Button";
 
-const Hero = () => {
+const Hero = ({h2, h3}) => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center md:px-10 sm:flex-col">
       <div className="space-y-5 text-center md:text-left px-5 mb-5 md:w-1/2 sm:w-full">
         <h2 className="text-5xl font-extrabold text-blue-950">
-          Xperience. Build. Collaborate.
+          {h2}
         </h2>
-        <p className="text-xl">
-          Xperience an internship that bridges the gap between you and your next
-          job as a developer!
-        </p>
+        <h3 className="text-xl">
+          {h3}
+        </h3>
         <p className="text-xl">
           Work as an intern on a fast-paced start-up that provides you real
           world Xperience, mentorship, collaboration, and certification.
