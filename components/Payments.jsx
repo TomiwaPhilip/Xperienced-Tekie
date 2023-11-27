@@ -1,27 +1,35 @@
 import Link from "next/link";
 
-const Payments = () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(async (position) => {
-      const { latitude, longitude } = position.coords;
-      // console.log(position);
-      console.log(`LAT: ${latitude}, LONG: ${longitude}`);
+const Payments = (location) => {
+  // if (navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(async (position) => {
+  //     const { latitude, longitude } = position.coords;
+  //     // console.log(position);
+  //     console.log(`LAT: ${latitude}, LONG: ${longitude}`);
 
-      // const response = await fetch(
-      //   `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&featureTypes=&location=${latitude},${longitude}`
-      // );
-    });
+  //     // const response = await fetch(
+  //     //   `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&featureTypes=&location=${latitude},${longitude}`
+  //     // );
+  //   });
+  // }
+
+  const locate = location.location;
+  let country = "";
+  if (locate === "Nigeria") {
+    country = "https://flutterwave.com/pay/eq39mcs3qwor";
+  } else {
+    country = "https://flutterwave.com/pay/zauiapy1p0xb";
   }
 
   return (
-    <section className="w-[300px] py-5 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center">
+    <section className="w-[300px] md:w-[400px] py-5 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center">
       <h2 className="font-[600] text-blue-950 text-2xl">Get Certified</h2>
       <h2 className="text-blue-500">14 days: 4:hours 55:min 10secs</h2>
       <p className="text-center">
-        left to make payments of 2$ to get your certificate
+        Left to make payments of 3$ to get your certificate
       </p>
       <button className="flex text-white bg-blue-950 px-5 items-center rounded-lg">
-        <Link href="https://flutterwave.com/pay/zauiapy1p0xb">
+        <Link href={country} className="flex items-center">
           <span>Go</span>
           <svg
             width="41"

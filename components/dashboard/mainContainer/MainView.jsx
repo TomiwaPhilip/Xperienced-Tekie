@@ -19,10 +19,16 @@ import CertDownloadForm from "./../../CertDownloadForm";
 
 const MainView = () => {
   const [pathChosen, setPathChosen] = useState("");
+  const [location, setLocation] = useState("");
   const [userExist, setUserExists] = useState(false);
   const [project, setProject] = useState(true);
   const [payments, setPayments] = useState(false);
   const [certificate, setCertificate] = useState(false);
+
+  const { user } = useUser();
+  const userId = user && user.id;
+
+  const paths = ["frontend", "backend", "fullstack"];
 
   const handleNav = (id) => {
     if (id === "project") {
@@ -42,20 +48,17 @@ const MainView = () => {
     }
   };
 
-  const { user } = useUser();
-  const userId = user && user.id;
-
-  const paths = ["frontend", "backend", "fullstack"];
-
   if (userId) {
     fetch(`/api/user-details/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         if (paths.includes(data.path)) {
           setPathChosen(data.path);
+          setLocation(data.location);
           setUserExists(true);
         }
         console.log(pathChosen);
+        console.log(location);
       });
   }
 
@@ -70,7 +73,7 @@ const MainView = () => {
           {project && pathChosen === "frontend" && <FrontendCard />}
           {project && pathChosen === "backend" && <BackendCard />}
           {project && pathChosen === "" && <Form />}
-          {payments && <Payments />}
+          {payments && <Payments location={location} />}
           {certificate && <CertDownload />}
           {/* <PaymentSuccess /> */}
           {/* <CertDownloadForm /> */}
