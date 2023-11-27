@@ -13,7 +13,7 @@ const RootLayout = ({ children }) => {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="gradient">
+        <body>
           <div className="">
             <Nav />
           </div>

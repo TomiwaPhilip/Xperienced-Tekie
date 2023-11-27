@@ -6,113 +6,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
 
-// const Nav = () => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-//   const { user } = useUser();
-
-//   return (
-//     <nav className="mt-[20px]">
-//       {/* Desktop Navigation */}
-//       <div className="container mx-auto">
-//         <div className="max-sm:hidden flex justify-between items-center">
-//           <Image src={"/assets/images/X.png"} alt="X" width={50} height={50} />
-//           <ul className="flex space-x-4 gap-4 font-semibold">
-//             <Link href="/" className="p-3">
-//               Home
-//             </Link>
-//             <Link href="/" className="p-3">
-//               About Us
-//             </Link>
-//             {user ? (
-//               <Link
-//                 href="/dashboard"
-//                 className="rounded-full gradient_dark text-blue-950 p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-//               >
-//                 Dashboard
-//               </Link>
-//             ) : (
-//               <Link
-//                 href="/sign-in"
-//                 className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-//               >
-//                 Sign In
-//               </Link>
-//             )}
-//           </ul>
-//         </div>
-
-//         {/* Mobile Navigation */}
-//         <div className="sm:hidden container flex justify-between p-3 items-center">
-//           <Image
-//             src={"/assets/images/X.png"}
-//             alt="logo"
-//             width={50}
-//             height={50}
-//           />
-//           <button
-//             type="button"
-//             className=""
-//             onClick={() => {
-//               setIsMenuOpen(!isMenuOpen);
-//             }}
-//           >
-//             <Image src={X} alt="logo" width={50} height={50} />
-//           </button>
-//         </div>
-//         {isMenuOpen && (
-//           <ul className="flex  items-center gap-6 p-3 justify-between">
-//             <Link
-//               href="/"
-//               className=""
-//               onClick={() => {
-//                 setIsMenuOpen(false);
-//               }}
-//             >
-//               Home
-//             </Link>
-//             <br />
-//             <Link
-//               href="/"
-//               className=""
-//               onClick={() => {
-//                 setIsMenuOpen(false);
-//               }}
-//             >
-//               About Us
-//             </Link>
-//             <br />
-//             {user ? (
-//               <Link
-//                 href="/dashboard"
-//                 className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-//               >
-//                 Dashboard
-//               </Link>
-//             ) : (
-//               <Link
-//                 href="/sign-in"
-//                 className="rounded-full gradient_dark text-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-//               >
-//                 Sign In
-//               </Link>
-//             )}
-//           </ul>
-//         )}
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Nav;
-
-// import { useState } from "react";
-// import Link from "next/link";
-// // import "../globals.css";
-
-// import Image from "next/image";
-// // import X from "../../../public/assets/images/X.png";
-
 export default function PrimaryNavbar() {
   const [showDropDown, setShowDropDown] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
@@ -124,7 +17,7 @@ export default function PrimaryNavbar() {
       <div className="flex justify-between md:px-10 px-2 pr-4 items-center">
         <div>
           <Link href="/" className="">
-            <Image src={X} width="70" height="70" alt="Xperienced Tekie logo" />
+            <Image src={X} width="70" height="70" alt="xperienced_tekie_logo" />
           </Link>
         </div>
         <div className="relative hidden md:block font-semibold">
@@ -157,9 +50,9 @@ export default function PrimaryNavbar() {
                 </li>
               </Link>
             ) : (
-              <Link href="/sign-in">
+              <Link href="/sign-up">
                 <li className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer">
-                  Sign-In
+                  Sign Up
                 </li>
               </Link>
             )}
@@ -249,7 +142,7 @@ function MobileNav({ user, showDropDown, setShowDropDown, onClick }) {
             >
               <path
                 d="M11.6784 13.8215C11.0276 13.1706 9.97228 13.1706 9.32141 13.8215C8.67053 14.4724 8.67053 15.5276 9.32141 16.1785L19.3214 26.1785C19.9723 26.8294 21.0276 26.8294 21.6784 26.1785L31.6784 16.1785C32.3293 15.5276 32.3293 14.4724 31.6784 13.8215C31.0276 13.1706 29.9723 13.1706 29.3214 13.8215L20.4999 22.643L11.6784 13.8215Z"
-                fill="#2D3648"
+                fill="#FFFFFF"
               />
             </svg>
           </span>
@@ -280,12 +173,12 @@ function MobileNav({ user, showDropDown, setShowDropDown, onClick }) {
             </li>
           </Link>
         ) : (
-          <Link href="/sign-in">
+          <Link href="/sign-up">
             <li
               onClick={onClick}
               className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer"
             >
-              Sign-In
+              Sign Up
             </li>
           </Link>
         )}

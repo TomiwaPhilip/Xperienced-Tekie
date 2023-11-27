@@ -6,67 +6,11 @@ import Button from "../button/Button";
 const Testimonials = () => {
   return (
     <div className="relative testimonials-section">
-      <div className="absolute -left-52">
-        <svg
-          width="300"
-          height="300"
-          viewBox="0 0 124 124"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <ellipse
-            cx="47.0373"
-            cy="42.2507"
-            rx="46.9627"
-            ry="41.7493"
-            fill="#EB9ECC"
-          />
-        </svg>
-      </div>
-      <div className="content-width testimonials-left">
+      <div className="testimonials-left">
         <h2 className="heading-2 text-center">See what our interns said</h2>
+        <br />
+        
         <div className="testimonial-slider"></div>
-        <Button
-          params={"btn-signup"}
-          name={"Sign Up Now"}
-          svg={
-            <svg
-              className="inline"
-              width="50px"
-              height="50px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
-
-              <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <path
-                  d="M6.5 12H17"
-                  stroke="#000"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />{" "}
-                <path
-                  d="M12.9117 8L17.5 12L12.9117 16"
-                  stroke="#000"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />{" "}
-              </g>
-            </svg>
-          }
-          link={"/sign-up"}
-        />
         <div className="other-ratings">
           <div className="capterra">
             <div className="capterra-top">
@@ -212,7 +156,51 @@ const Testimonials = () => {
             </div>
             <p>4.5 Star Rating</p>
           </div>
+          
         </div>
+
+        <br />
+        <Button
+          params={"btn-signup"}
+          name={"Sign Up Now"}
+          svg={
+            <svg
+              className="inline"
+              width="50px"
+              height="50px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M6.5 12H17"
+                  stroke="#000"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />{" "}
+                <path
+                  d="M12.9117 8L17.5 12L12.9117 16"
+                  stroke="#000"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />{" "}
+              </g>
+            </svg>
+          }
+          link={"/sign-up"}
+        />
       </div>
     </div>
   );
