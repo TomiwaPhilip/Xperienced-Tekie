@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import Button from "../../../components/shared/button/Button";
 import Hero from "../../../components/shared/hero/Hero";
 import Mentorship from "../../../components/shared/mentorship/Mentorship";
 import StartDoing from "./../../../components/home/start-doing/StartDoing";
