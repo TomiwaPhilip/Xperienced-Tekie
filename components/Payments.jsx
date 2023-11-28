@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useState } from "react";
 
 const Payments = (location) => {
+
+  
   // if (navigator.geolocation) {
   //   navigator.geolocation.getCurrentPosition(async (position) => {
   //     const { latitude, longitude } = position.coords;
@@ -12,6 +15,8 @@ const Payments = (location) => {
   //     // );
   //   });
   // }
+
+  
 
   const locate = location.location;
   let country = "";
