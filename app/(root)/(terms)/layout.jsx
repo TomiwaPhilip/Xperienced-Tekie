@@ -2,7 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import Nav from "../../../components/shared/Nav";
 import "../../globals.css";
-import AnimateContent from "../../../../components/shared/AnimateContent";
+import AnimateContent from "../../../components/shared/AnimateContent";
 
 export const metadata = {
   title: "Xperienced Tekie",
