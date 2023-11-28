@@ -2,11 +2,12 @@ import mongoose from "mongoose";
 
 const dbConnect = async () => {
   try {
-    if (mongoose.connections[0].readyState) {
+    if (mongoose.connection.readyState === 1) {
+      console.log("MongoDB is already connected.");
       return;
     }
 
-    console.log("connecting to mongo...");
+    console.log("Connecting to MongoDB...");
     await mongoose.connect(process.env.MONGODB_URI, {
       dbName: "user_path",
       useNewUrlParser: true,
