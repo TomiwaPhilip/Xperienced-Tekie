@@ -8,35 +8,6 @@ const Mentorship = () => {
   return (
     <div className="mentorship-section relative flex-col md:flex-row py-15">
       <div className="content-width mentorship-left mb-10 md:w-1/2 md:pr-10">
-<<<<<<< HEAD
-        <h2 className="heading-2 text-blue-950 pt-16 pb-3">
-          Free Mentorship Access
-        </h2>
-        <p>
-          Take charge of your future, Supercharge your career by building real
-          world projects and collaborating with other developers.
-        </p>
-        <p>
-          Be in a live code review and analysis led by team leaders and senior
-          software developers.
-        </p>
-        <p>
-          Get hands-on experience and community feedbacks while working on
-          projects.
-        </p>
-        <Button
-          name={"Sign Up Now"}
-          svg={
-            <svg
-              className="inline"
-              width="50px"
-              height="50px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
-=======
         <AnimateContent>
           <h2 className="heading-2 text-blue-950 pt-16 pb-3">
             Free Mentorship Access
@@ -73,7 +44,6 @@ const Mentorship = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <g id="SVGRepo_bgCarrier" strokeWidth="0" />
->>>>>>> 4a13ab30408b35ac241353e9cc46c5da34c793f1
 
                 <g
                   id="SVGRepo_tracerCarrier"
