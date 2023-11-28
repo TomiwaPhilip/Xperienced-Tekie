@@ -2,8 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import Nav from "../../../components/shared/Nav";
 import "../../globals.css";
-import Footer from "./../../../components/shared/footer/Footer";
-import AnimateContent from "../../../components/shared/AnimateContent";
+import AnimateContent from "../../../../components/shared/AnimateContent";
 
 export const metadata = {
   title: "Xperienced Tekie",
@@ -19,11 +18,6 @@ const RootLayout = ({ children }) => {
             <Nav />
           </AnimateContent>
           <main className="main">{children}</main>
-          <div className="">
-            <AnimateContent>
-              <Footer />
-            </AnimateContent>
-          </div>
         </body>
       </html>
     </ClerkProvider>

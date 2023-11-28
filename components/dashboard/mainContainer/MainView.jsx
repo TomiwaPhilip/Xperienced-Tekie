@@ -24,6 +24,7 @@ const MainView = () => {
   const [project, setProject] = useState(true);
   const [payments, setPayments] = useState(false);
   const [certificate, setCertificate] = useState(false);
+  const [paid, setPaid] = useState(true);
 
   const { user } = useUser();
   const userId = user && user.id;
@@ -74,7 +75,7 @@ const MainView = () => {
           {project && pathChosen === "backend" && <BackendCard />}
           {project && pathChosen === "" && <Form />}
           {payments && <Payments location={location} />}
-          {certificate && <CertDownload />}
+          {certificate && paid ? <CertDownloadForm /> : <CertDownload />}
           {/* <PaymentSuccess /> */}
           {/* <CertDownloadForm /> */}
         </section>
