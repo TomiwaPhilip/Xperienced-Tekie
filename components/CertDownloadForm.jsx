@@ -5,7 +5,7 @@ const CertDownloadForm = () => {
   const [fullName, setFullName] = useState("");
   const [path, setPath] = useState("");
   return (
-    <div className="flex flex-col py-10 items-center w-[300px] border-4 border-blue-950  bg-pink-100 rounded-xl">
+    <div className="flex flex-col py-10 items-center w-[300px] md:w-[400px] border-4 border-blue-950  bg-pink-100 rounded-xl">
       <h3 className="font-[600] p-3 text-2xl text-blue-950 text-center">
         Congratulations!!!
       </h3>
@@ -15,7 +15,7 @@ const CertDownloadForm = () => {
       <div className="">
         <form className="space-y-4 flex flex-col items-center">
           <input
-            className="p-2 border w-full border-gray-300 rounded-lg"
+            className="p-2 border border-gray-300 w-[250px] rounded-lg"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             type="text"
@@ -26,16 +26,14 @@ const CertDownloadForm = () => {
             id="path"
             value={path}
             onChange={(e) => setPath(e.target.value)}
-            className="p-2 border border-gray-300 bg-white rounded"
+            className="p-2 border w-[200px]  border-gray-300 bg-white rounded"
           >
-            <option value="selectend">Select</option>
-            <option value="frontend">
-              Frontend Web Development with React
+            <option value="selectend" className="w-[300px]">
+              Select
             </option>
-            <option value="backend">Backend Web Development with NodeJS</option>
-            <option value="fullstack">
-              Full Stack Web Development with Next.JS
-            </option>
+            <option value="frontend">Frontend with React</option>
+            <option value="backend">Backend with NodeJS</option>
+            <option value="fullstack">Full Stack with Next.JS</option>
           </select>
           <button
             type="submit"

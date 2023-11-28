@@ -75,7 +75,12 @@ const MainView = () => {
           {project && pathChosen === "backend" && <BackendCard />}
           {project && pathChosen === "" && <Form />}
           {payments && <Payments location={location} />}
-          {certificate && paid ? <CertDownloadForm /> : <CertDownload />}
+          {certificate && <CertDownloadForm />}
+          {/* {!project && certificate && paid ? (
+            <CertDownloadForm />
+          ) : (
+            <CertDownload />
+          )} */}
           {/* <PaymentSuccess /> */}
           {/* <CertDownloadForm /> */}
         </section>
