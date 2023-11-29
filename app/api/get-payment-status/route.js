@@ -9,7 +9,7 @@ export const GET = async (req) => {
   // const { email } = req.query; // commented out because of error on vercel
   const email = "xperiencedtekie@gmail.com"; // just for test deployment
 
-  console.log(req.query);
+  // console.log(req.query);
 
   console.log(email);
 
