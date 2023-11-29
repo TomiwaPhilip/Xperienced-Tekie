@@ -25,6 +25,7 @@ const MainView = () => {
   const [payments, setPayments] = useState(false);
   const [certificate, setCertificate] = useState(false);
   const [paid, setPaid] = useState(true);
+  const [status, setStatus] = useState("");
 
   const { user } = useUser();
   const userId = user && user.id;
@@ -62,6 +63,15 @@ const MainView = () => {
         console.log(location);
       });
   }
+
+  const email = user?.email;
+  fetch(`/api/get-payment-status?email=${email}`)
+    .then((response) => response.json())
+    .then((data) => {
+      setStatus(data.status);
+      console.log("Payment Status:", data.status);
+    })
+    .catch((error) => console.error("Error fetching payment status:", error));
 
   return (
     <main className="main-container">
