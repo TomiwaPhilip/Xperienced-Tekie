@@ -14,20 +14,15 @@ import FullstackCard from "../FullstackCard";
 
 import Payments from "./../../Payments";
 import CertDownload from "./../../CertDownload";
-import PaymentSuccess from "./../../PaymentSuccess";
-import CertDownloadForm from "./../../CertDownloadForm";
 
 const MainView = () => {
   const [pathChosen, setPathChosen] = useState("");
-  const [location, setLocation] = useState("");
-  const [userExist, setUserExists] = useState(false);
   const [project, setProject] = useState(true);
   const [payments, setPayments] = useState(false);
   const [certificate, setCertificate] = useState(false);
-  const [paid, setPaid] = useState(true);
-  const [status, setStatus] = useState("");
 
   const { user } = useUser();
+
   const userId = user && user.id;
 
   const paths = ["frontend", "backend", "fullstack"];
@@ -56,22 +51,10 @@ const MainView = () => {
       .then((data) => {
         if (paths.includes(data.path)) {
           setPathChosen(data.path);
-          setLocation(data.location);
-          setUserExists(true);
         }
         console.log(pathChosen);
-        console.log(location);
       });
   }
-
-  const email = user?.email;
-  fetch(`/api/get-payment-status?email=${email}`)
-    .then((response) => response.json())
-    .then((data) => {
-      setStatus(data.status);
-      console.log("Payment Status:", data.status);
-    })
-    .catch((error) => console.error("Error fetching payment status:", error));
 
   return (
     <main className="main-container">
@@ -84,15 +67,8 @@ const MainView = () => {
           {project && pathChosen === "frontend" && <FrontendCard />}
           {project && pathChosen === "backend" && <BackendCard />}
           {project && pathChosen === "" && <Form />}
-          {payments && <Payments location={location} />}
-          {certificate && <CertDownloadForm />}
-          {/* {!project && certificate && paid ? (
-            <CertDownloadForm />
-          ) : (
-            <CertDownload />
-          )} */}
-          {/* <PaymentSuccess /> */}
-          {/* <CertDownloadForm /> */}
+          {payments && <Payments />}
+          {certificate && <CertDownload />}
         </section>
       </div>
       <div className="sm:hidden footer">

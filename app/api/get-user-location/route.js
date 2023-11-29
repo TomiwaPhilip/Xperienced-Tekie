@@ -1,5 +1,5 @@
 import dbConnect from "../../../utils/database";
-import Payments from "../../../model/payment";
+import User from "../../../model/userForm";
 
 export const GET = async (req) => {
   if (req.method !== "GET") {
@@ -8,32 +8,32 @@ export const GET = async (req) => {
 
   const reqParams = req.url.split("/");
   const query = reqParams[reqParams.length - 1];
-  const urlString = query.replace(/^email=/, "");
+  const urlString = query.replace(/^userId=/, "");
   const parts = urlString.split("?");
 
-  let email = "";
+  let userId = "";
 
   // Check if there is a query string
   if (parts.length === 2) {
-    email = parts[1];
-    console.log(email);
+    userId = parts[1];
+    console.log(userId);
   } else {
-    console.log("No email found");
+    console.log("No userId found");
   }
 
   try {
     // Connect to the database
     await dbConnect();
 
-    // Query the database for the payment status
-    const payment = await Payments.findOne({ email });
+    // Query the database for the location
+    const location = await User.findOne({ userId });
 
-    if (!payment) {
-      return new Response("Payment not found", { status: 404 });
+    if (!location) {
+      return new Response("User Location not found", { status: 404 });
     }
 
-    // Send the payment status in the response
-    return new Response(JSON.stringify({ status: payment.status }), {
+    // Send the location in the response
+    return new Response(JSON.stringify({ location: User.location }), {
       status: 200,
     });
   } catch (error) {
