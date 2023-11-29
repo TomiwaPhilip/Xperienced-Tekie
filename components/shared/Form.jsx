@@ -54,7 +54,7 @@ const Form = () => {
       {loading ? (
         <LoadingSkeleton />
       ) : (
-        <div className="flex flex-col py-10 items-center w-[380px] border-4 border-blue-950  bg-pink-100 rounded-xl">
+        <div className="flex flex-col py-5 md:py-19 items-center w-[320px] md:w-[380px] border-4 border-blue-950  bg-pink-100 rounded-xl">
           <h3 className="font-[600] p-3 text-2xl text-blue-950 text-center">
             Let's get you set and going...!
           </h3>
@@ -71,7 +71,7 @@ const Form = () => {
                 id="path"
                 value={path}
                 onChange={(e) => setPath(e.target.value)}
-                className="p-2 border border-gray-300 bg-white rounded"
+                className="p-2 border border-gray-300 w-[300px] bg-white rounded"
               >
                 <option value="selectend">Select</option>
                 <option value="frontend">
