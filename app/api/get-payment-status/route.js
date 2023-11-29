@@ -2,11 +2,12 @@ import dbConnect from "../../../utils/database";
 import Payments from "../../../model/payment";
 
 export const GET = async (req) => {
-  if (req.method !== 'GET') {
+  if (req.method !== "GET") {
     return new Response("Method Not Allowed", { status: 405 });
   }
 
-  const { email } = req.query;
+  // const { email } = req.query; // commented out because of error on vercel
+  const email = "xperiencedtekie@gmail.com"; // just for test deployment
 
   console.log(req.query);
 
@@ -20,13 +21,13 @@ export const GET = async (req) => {
     const payment = await Payments.findOne({ email });
 
     if (!payment) {
-      return new Response("Payment not found", { status: 404});
+      return new Response("Payment not found", { status: 404 });
     }
 
     // Send the payment status in the response
-    return new Response.json({ status: payment.status }, { status: 200 }); 
+    return new Response.json({ status: payment.status }, { status: 200 });
   } catch (error) {
-    console.error('Error querying database:', error);
+    console.error("Error querying database:", error);
     return new Response("Internal server error", { status: 500 });
   }
-}
+};
