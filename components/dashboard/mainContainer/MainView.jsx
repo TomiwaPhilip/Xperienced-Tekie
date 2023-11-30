@@ -17,6 +17,7 @@ import CertDownload from "./../../CertDownload";
 
 const MainView = () => {
   const [pathChosen, setPathChosen] = useState("");
+  const [paymentStatus, setPaymentStatus] = useState("");
   const [project, setProject] = useState(true);
   const [payments, setPayments] = useState(false);
   const [certificate, setCertificate] = useState(false);
@@ -46,6 +47,7 @@ const MainView = () => {
   };
 
   if (userId) {
+    console.log(user.emailAddresses[0].emailAddress);
     fetch(`/api/user-details/${userId}`)
       .then((res) => res.json())
       .then((data) => {
@@ -55,6 +57,14 @@ const MainView = () => {
         console.log(pathChosen);
       });
   }
+
+  // get payment status
+  fetch(`/api/get-payment-status/${user.emailAddresses[0].emailAddress}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setPaymentStatus(data.status);
+      console.log(paymentStatus);
+    });
 
   return (
     <main className="main-container relative h-full">
