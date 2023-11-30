@@ -9,5 +9,5 @@
     border-radius: 0px 0px 10px 0px;
     background-color: #00234E;
     flex-shrink: 0;
-    z-index: 100;
+    z-index: 10;
 }

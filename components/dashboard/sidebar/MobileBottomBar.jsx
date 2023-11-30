@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const MobileBottomBar = ({ onClick }) => {
   return (
-    <aside className="w-full fixed bg-blue-950 text-white flex h-20 items-center justify-evenly">
+    <aside className="w-full fixed bg-blue-950 text-white flex h-20 items-start pt-2 justify-evenly">
       <div onClick={() => onClick("project")} className="flex cursor-pointer">
         <svg
           width="20"

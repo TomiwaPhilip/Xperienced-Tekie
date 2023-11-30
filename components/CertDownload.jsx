@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const CertDownload = () => {
   return (
-    <section className="w-[300px] md:w-[400px] py-5 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center">
+    <section className="w-[300px] mt-[100px] md:w-[400px] py-5 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center">
       <h2 className="font-[600] text-blue-950 text-2xl">
         Download Certificate
       </h2>
-      <h2 className="text-blue-500">14 days: 4:hours 55:min 10secs</h2>
+      <h2 className="text-blue-500 text-xl">14 days: 4:hours 55:min 10secs</h2>
       <p className="text-center">
         Left to make payments of 3$ to get your certificate
       </p>

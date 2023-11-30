@@ -1,9 +1,8 @@
 import "./SideBar.css";
-import Link from "next/link";
 
 const SideBar = ({ onClick }) => {
   return (
-    <aside className="sideba fixed bg-blue-950 w-[150px] md:w-[200px] h-full flex flex-col text-white py-[161px] gap-5 pl-5">
+    <aside className="fixed bg-blue-950 w-[150px] md:w-[180px] h-full flex flex-col text-white py-[161px] gap-5 pl-5">
       <div
         onClick={() => onClick("project")}
         className="sidebar-1 cursor-pointer"

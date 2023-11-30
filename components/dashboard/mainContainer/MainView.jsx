@@ -57,11 +57,11 @@ const MainView = () => {
   }
 
   return (
-    <main className="main-container">
-      <div className="hidden  md:block aside">
+    <main className="main-container relative h-full">
+      <div className="hidden md:block aside fixed">
         <SideBar onClick={handleNav} />
       </div>
-      <div className="main-content md:h-[700px]">
+      <div className="main-content md:h-[700px] md:w-[800px] md:ml-[100px]">
         <section className="">
           {project && pathChosen === "fullstack" && <FullstackCard />}
           {project && pathChosen === "frontend" && <FrontendCard />}
@@ -71,7 +71,7 @@ const MainView = () => {
           {certificate && <CertDownload />}
         </section>
       </div>
-      <div className="md:hidden lower-nav">
+      <div className="md:hidden absolute bottom-0 z-100">
         <MobileBottomBar onClick={handleNav} />
       </div>
     </main>
