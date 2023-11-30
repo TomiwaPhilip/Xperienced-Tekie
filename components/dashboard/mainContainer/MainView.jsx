@@ -5,7 +5,7 @@ import { useUser } from "@clerk/nextjs";
 
 import "./MainView.css";
 import SideBar from "./../sidebar/SideBar";
-import Footer from "./../sidebar/DashboardFooter";
+import MobileBottomBar from "../sidebar/MobileBottomBar";
 import Form from "../../shared/Form";
 import "../../../app/globals.css";
 import FrontendCard from "../FrontendCard";
@@ -58,7 +58,7 @@ const MainView = () => {
 
   return (
     <main className="main-container">
-      <div className="hidden  sm:block aside">
+      <div className="hidden  md:block aside">
         <SideBar onClick={handleNav} />
       </div>
       <div className="main-content md:h-[700px]">
@@ -71,8 +71,8 @@ const MainView = () => {
           {certificate && <CertDownload />}
         </section>
       </div>
-      <div className="sm:hidden footer">
-        <Footer onClick={handleNav} />
+      <div className="md:hidden lower-nav">
+        <MobileBottomBar onClick={handleNav} />
       </div>
     </main>
   );

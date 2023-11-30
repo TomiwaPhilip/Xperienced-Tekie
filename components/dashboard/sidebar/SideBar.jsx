@@ -4,7 +4,6 @@ import Link from "next/link";
 const SideBar = ({ onClick }) => {
   return (
     <aside className="sideba fixed bg-blue-950 w-[150px] md:w-[200px] h-full flex flex-col text-white py-[161px] gap-5 pl-5">
-      {/* <Link href="#"> */}
       <div
         onClick={() => onClick("project")}
         className="sidebar-1 cursor-pointer"
@@ -27,8 +26,6 @@ const SideBar = ({ onClick }) => {
         </svg>
         <p>Projects</p>
       </div>
-      {/* </Link> */}
-      {/* <Link href="#"> */}
       <div
         onClick={() => onClick("payment")}
         className="sidebar-2 cursor-pointer"
@@ -49,8 +46,6 @@ const SideBar = ({ onClick }) => {
         </svg>
         <p>Payments</p>
       </div>
-      {/* </Link> */}
-      {/* <Link href="#"> */}
       <div
         onClick={() => onClick("certificate")}
         className="sidebar-3 cursor-pointer"
@@ -73,7 +68,6 @@ const SideBar = ({ onClick }) => {
         </svg>
         <p>Certificate</p>
       </div>
-      {/* </Link> */}
     </aside>
   );
 };
