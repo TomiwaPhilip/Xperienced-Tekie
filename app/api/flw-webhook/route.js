@@ -1,6 +1,5 @@
 import dbConnect from "../../../utils/database";
 import Payments from "../../../model/payment";
-import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
   // Create an array to store chunks of the stream
@@ -38,12 +37,16 @@ export const POST = async (req) => {
     const update = { status: status };
     const options = { new: true, upsert: true }; // Creates a new document if it doesn't exist
 
-    const updatedDocument = await Payments.findOneAndUpdate(filter, update, options);
+    const updatedDocument = await Payments.findOneAndUpdate(
+      filter,
+      update,
+      options,
+    );
 
-    console.log('Payment details saved to the database.');
+    console.log("Payment details saved to the database.");
   } catch (error) {
-    console.error('Error processing webhook:', error);
-    return new Response('Error processing webhook', { status: 500 });
+    console.error("Error processing webhook:", error);
+    return new Response("Error processing webhook", { status: 500 });
   }
 
   return new Response("Successful webhook consumption", { status: 200 });

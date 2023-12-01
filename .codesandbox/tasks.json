@@ -57,6 +57,42 @@
     "npm prune": {
       "name": "prune",
       "command": "npm prune"
+    },
+    "npm install jimp": {
+      "name": "jimp",
+      "command": "npm install jimp"
+    },
+    "npm install puppeteer": {
+      "name": "pupeteer",
+      "command": "npm install puppeteer"
+    },
+    "npm instal html-pdf": {
+      "name": "html-pdf",
+      "command": "npm instal html-pdf"
+    },
+    "npm install pdfkit": {
+      "name": "pdfkit",
+      "command": "npm install pdfkit"
+    },
+    "npm update pdfkit": {
+      "name": "update pdfkit",
+      "command": "npm update pdfkit"
+    },
+    "npm install iconv-lite": {
+      "name": "iconv",
+      "command": "npm install iconv-lite"
+    },
+    "npm cache clean --force": {
+      "name": "cache clear",
+      "command": "npm cache clean --force"
+    },
+    "npm install puppeteer-html-to-pdf": {
+      "name": "htl",
+      "command": "npm install puppeteer-html-to-pdf"
+    },
+    "npm install html-pdf-node": {
+      "name": "htmlpdf node",
+      "command": "npm install html-pdf-node"
     }
   }
 }

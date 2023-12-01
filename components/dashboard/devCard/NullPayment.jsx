@@ -34,7 +34,7 @@ const NullPayment = () => {
       <p className="text-center">
         Left to make payment of 3$ for your certificate.
       </p>
-      <p className="text-red-950 text-center p-3">
+      <p className="text-red-950 text-center p-3 text-[20px] font-semibold">
         Please use the email address you used at registration when making
         payments.
       </p>

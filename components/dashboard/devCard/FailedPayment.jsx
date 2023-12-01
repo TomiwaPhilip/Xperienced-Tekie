@@ -34,7 +34,7 @@ const FailedPayment = () => {
       <p className="text-center">
         Unsuccessful payment of 3$ for your certificate. Plese try again now!
       </p>
-      <p className="text-red text-center">
+      <p className="text-red-950 text-center p-3 text-[20px] font-semibold">
         Please use the email address you used at registration when making
         payments.
       </p>
