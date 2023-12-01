@@ -2,7 +2,7 @@
 
 const SuccessPayment = () => {
   return (
-    <section className="w-[300px] h-[300px] py-10 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center justify-center">
+    <section className="w-[300px] mt-[100px] h-[300px] py-10 gab-5 bg-pink-100 rounded-lg border-4 border-blue-950 flex flex-col gap-5 items-center justify-center">
       <div className="bg-blue-950 rounded-full p-3">
         <svg
           width="73"

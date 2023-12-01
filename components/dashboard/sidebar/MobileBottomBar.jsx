@@ -1,10 +1,9 @@
 import "./SideBar.css";
 import Link from "next/link";
 
-const Footer = ({ onClick }) => {
+const MobileBottomBar = ({ onClick }) => {
   return (
-    <footer className="w-full bg-blue-950 text-white flex h-20 items-center justify-evenly">
-      {/* <Link href="#"> */}
+    <aside className="w-full fixed bg-blue-950 text-white flex h-20 items-start pt-2 justify-evenly">
       <div onClick={() => onClick("project")} className="flex cursor-pointer">
         <svg
           width="20"
@@ -24,8 +23,6 @@ const Footer = ({ onClick }) => {
         </svg>
         <p className="text-sm">Projects</p>
       </div>
-      {/* </Link> */}
-      {/* <Link href="#"> */}
       <div
         onClick={() => onClick("payment")}
         className="cursor-pointer sidebar-2"
@@ -46,8 +43,7 @@ const Footer = ({ onClick }) => {
         </svg>
         <p className="text-sm">Payments</p>
       </div>
-      {/* </Link> */}
-      {/* <Link href="#"> */}
+
       <div
         onClick={() => onClick("certificate")}
         className="sidebar-3 cursor-pointer"
@@ -70,9 +66,8 @@ const Footer = ({ onClick }) => {
         </svg>
         <p className="text-sm">Certificate</p>
       </div>
-      {/* </Link> */}
-    </footer>
+    </aside>
   );
 };
 
-export default Footer;
+export default MobileBottomBar;

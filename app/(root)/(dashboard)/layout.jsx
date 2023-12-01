@@ -13,7 +13,7 @@ const DashboardLayout = ({ children }) => {
     <ClerkProvider>
       <html>
         <body>
-          <main className="">
+          <main className="h-full">
             <DashNav />
             {children}
           </main>

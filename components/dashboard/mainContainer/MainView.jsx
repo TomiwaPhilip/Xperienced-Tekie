@@ -5,7 +5,7 @@ import { useUser } from "@clerk/nextjs";
 
 import "./MainView.css";
 import SideBar from "./../sidebar/SideBar";
-import Footer from "./../sidebar/DashboardFooter";
+import MobileBottomBar from "../sidebar/MobileBottomBar";
 import Form from "../../shared/Form";
 import "../../../app/globals.css";
 import FrontendCard from "../FrontendCard";
@@ -17,6 +17,7 @@ import CertDownload from "./../../CertDownload";
 
 const MainView = () => {
   const [pathChosen, setPathChosen] = useState("");
+  const [paymentStatus, setPaymentStatus] = useState("");
   const [project, setProject] = useState(true);
   const [payments, setPayments] = useState(false);
   const [certificate, setCertificate] = useState(false);
@@ -46,6 +47,7 @@ const MainView = () => {
   };
 
   if (userId) {
+    console.log(user.emailAddresses[0].emailAddress);
     fetch(`/api/user-details/${userId}`)
       .then((res) => res.json())
       .then((data) => {
@@ -56,12 +58,20 @@ const MainView = () => {
       });
   }
 
+  // get payment status
+  fetch(`/api/get-payment-status/${user.emailAddresses[0].emailAddress}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setPaymentStatus(data.status);
+      console.log(paymentStatus);
+    });
+
   return (
-    <main className="main-container">
-      <div className="hidden  sm:block aside">
+    <main className="main-container relative h-full">
+      <div className="hidden md:block aside fixed">
         <SideBar onClick={handleNav} />
       </div>
-      <div className="main-content md:h-[700px]">
+      <div className="main-content md:h-[700px] md:w-[800px] md:ml-[100px]">
         <section className="">
           {project && pathChosen === "fullstack" && <FullstackCard />}
           {project && pathChosen === "frontend" && <FrontendCard />}
@@ -71,8 +81,8 @@ const MainView = () => {
           {certificate && <CertDownload />}
         </section>
       </div>
-      <div className="sm:hidden footer">
-        <Footer onClick={handleNav} />
+      <div className="md:hidden absolute bottom-0 z-100">
+        <MobileBottomBar onClick={handleNav} />
       </div>
     </main>
   );
