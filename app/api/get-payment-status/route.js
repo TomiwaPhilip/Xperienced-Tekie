@@ -8,7 +8,7 @@ export const GET = async (req) => {
 
   const reqParams = req.url.split("/");
   const query = reqParams[reqParams.length - 1];
-  const urlString = query.replace(/^email=/, "");
+  const urlString = query.replace(/^\w*=/, ""); // Match any word character before the equal sign
   const parts = urlString.split("?");
 
   let email = "";
