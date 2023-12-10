@@ -7,26 +7,18 @@ export const GET = async (req) => {
   }
 
   const reqParams = req.url.split("/");
+  console.log(reqParams);
   const query = reqParams[reqParams.length - 1];
-  const urlString = query.split("?")[1]; // Extract the query string part
-  const parts = urlString ? urlString.split("&") : [];
+  const urlString = query.replace(/^email=/, "");
+  const parts = urlString.split("?");
 
   let email = "";
 
-  // Check if there are query parameters
-  if (parts.length > 0) {
-    // Iterate through the parameters to find an email-like value
-    for (const part of parts) {
-      const keyValue = part.split("=");
-      if (keyValue.length === 2 && keyValue[1]) {
-        email = keyValue[1];
-        console.log(email);
-        break; // Stop after finding the first non-empty parameter
-      }
-    }
-  }
-
-  if (!email) {
+  // Check if there is a query string
+  if (parts.length === 2) {
+    email = parts[1];
+    console.log(email);
+  } else {
     console.log("No email found");
   }
 
