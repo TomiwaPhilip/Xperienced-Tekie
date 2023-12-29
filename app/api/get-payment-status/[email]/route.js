@@ -1,17 +1,14 @@
-import dbConnect from "../../../utils/database";
-import Payments from "../../../model/payment";
+import dbConnect from "../../../../utils/database";
+import Payments from "../../../../model/payment";
 
 export const GET = async (req) => {
   if (req.method !== "GET") {
     return new Response("Method Not Allowed", { status: 405 });
   }
-
-  const reqParts = req.url.split("/");
-  const queryIndex = reqParts.indexOf("api") + 1;
-  const urlString = reqParts.slice(queryIndex).join("/");
-
-  const url = new URL(`http://dummyurl.com/${urlString}`);
-  const email = url.searchParams.get("email");
+  console.log(req.url);
+  const reqParams = req.url.split("/");
+  console.log(reqParams);
+  const email = reqParams[reqParams.length - 1];
 
   if (email) {
     console.log(email);

@@ -13,7 +13,7 @@ const StartBuilding = () => {
         <br />
         <div className="leading-loose">
           <AnimateContent>
-            <ul className="lg:text-left">
+            <ul className="md:text-left">
               <li>Sign up on our website </li>
               <li>
                 Take a 30 minutes Assessment Get selected for the internship

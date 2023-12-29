@@ -14,7 +14,7 @@ const CertDownload = () => {
   console.log(email);
 
   if (email) {
-    fetch(`/api/get-payment-status?${email}`)
+    fetch(`/api/get-payment-status/${email}`)
       .then((response) => response.json())
       .then((data) => {
         setStatus(data.status);
