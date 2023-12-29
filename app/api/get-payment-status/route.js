@@ -6,17 +6,14 @@ export const GET = async (req) => {
     return new Response("Method Not Allowed", { status: 405 });
   }
 
-  const reqParams = req.url.split("/");
-  console.log(reqParams);
-  const query = reqParams[reqParams.length - 1];
-  const urlString = query.replace(/^email=/, "");
-  const parts = urlString.split("?");
+  const reqParts = req.url.split("/");
+  const queryIndex = reqParts.indexOf("api") + 1;
+  const urlString = reqParts.slice(queryIndex).join("/");
 
-  let email = "";
+  const url = new URL(`http://dummyurl.com/${urlString}`);
+  const email = url.searchParams.get("email");
 
-  // Check if there is a query string
-  if (parts.length === 2) {
-    email = parts[1];
+  if (email) {
     console.log(email);
   } else {
     console.log("No email found");

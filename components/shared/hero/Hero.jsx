@@ -15,8 +15,8 @@ const Hero = ({ h2, h3 }) => {
         </AnimateContent>
         <AnimateContent>
           <p className="text-xl">
-            Work as an intern on a fast-paced start-up that provides you real
-            world Xperience, mentorship, collaboration, and certification.
+            Join an internship that gives you real world xperience, mentorship,
+            career guidance, a lifetime community support and certfication.
           </p>
         </AnimateContent>
         <AnimateContent>

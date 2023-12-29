@@ -10,25 +10,18 @@ const Mentorship = () => {
       <div className="content-width mentorship-left mb-10 md:w-1/2 md:pr-10">
         <AnimateContent>
           <h2 className="heading-2 text-blue-950 pt-16 pb-3">
-            Free Mentorship Access
+            Get Career Guidance. <br /> Avoid Frustration.
           </h2>
         </AnimateContent>
         <AnimateContent>
           <p>
-            Take charge of your future, Supercharge your career by building real
-            world projects and collaborating with other developers.
+            We have experienced the frustration of being a junior developer.
           </p>
         </AnimateContent>
         <AnimateContent>
           <p>
-            Be in a live code review and analysis led by team leaders and senior
-            software developers.
-          </p>
-        </AnimateContent>
-        <AnimateContent>
-          <p>
-            Get hands-on experience and community feedbacks while working on
-            projects.
+            Receive a person-to-person support and career guidance from senior
+            developers who have gotten to where you want to be.
           </p>
         </AnimateContent>
         <AnimateContent>

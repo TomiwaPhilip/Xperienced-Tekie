@@ -7,7 +7,7 @@ const DevPath = () => {
   return (
     <div className="dev-path bg-blue-950 flex flex-col items-center gap-5 pt-20 pb-20">
       <AnimateContent>
-        <h2>There is space for every developer...</h2>
+        <h2>Every developer stack is accepted</h2>
       </AnimateContent>
       <br />
       <div className="flex flex-col gap-5 sm:gap-24 md:flex-row md:justify-between">
@@ -15,16 +15,16 @@ const DevPath = () => {
           <Paths
             color="white"
             backgroundColor="#4BA3C5"
-            heading="Frontend Web Development Internship"
-            description="Our frontend Web development internship with React Js provides you with real world experience with skills that would make you job ready!"
+            heading="Frontend Web Development Internship with ReactJs"
+            description="Our frontend Web development internship with ReactJS provides you with real world experience with skills that would make you job ready!"
           />
         </AnimateContent>
         <AnimateContent>
           <Paths
             color="#000"
             backgroundColor="#fff"
-            heading="Backend Web Development Internship"
-            description="Our frontend Web development internship with React Js provides you with real world experience with skills that would make you job ready!"
+            heading="Backend Web Development Internship with NodeJS"
+            description="Our backend Web development internship with NodeJS provides you with real world experience with skills that would make you job ready!"
           />
         </AnimateContent>
       </div>

@@ -13,9 +13,9 @@ const GetingReady = () => {
           </AnimateContent>
           <AnimateContent>
             <p>
-              Click the sign-up button now to join the next cohort and start
-              building the next big product the world needs! Or read the FAQs
-              below to learn more about the internship!
+              Click the sign up button now to join the next cohort and start
+              building with other developers getting mentorship and guidance
+              from senior developers.
             </p>
           </AnimateContent>
           <AnimateContent>

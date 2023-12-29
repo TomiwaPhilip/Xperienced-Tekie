@@ -12,7 +12,7 @@ const StartDoing = () => {
       <div className="text-white text-center space-y-5 px-6">
         <AnimateContent>
           <h2 className="md:text-[50px] text-[40px] font-extrabold">
-            Start doing hard things...
+            Master your tech skill
           </h2>
         </AnimateContent>
         <br />
@@ -21,16 +21,14 @@ const StartDoing = () => {
         </AnimateContent>
         <AnimateContent>
           <p className="text-2xl md:px-6">
-            Our internship experience provides you an opportunity to focus on
-            things that matters. Unlock your potential and do what you have
-            never done before!
+            Work collaboratively on a fast-paced startup. Get code reviews on
+            pull requests and receive help when you get stuck.
           </p>
         </AnimateContent>
         <AnimateContent>
           <p className="text-2xl md:px-6">
-            From the day of your enrolment, you will work on building a product
-            collaboratively, master the art of coding and build products that
-            poeple use.
+            Get feedbacks from senior developers who have the experience you are
+            looking for.
           </p>
         </AnimateContent>
         <br /> <br />
