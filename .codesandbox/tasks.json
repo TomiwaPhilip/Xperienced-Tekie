@@ -93,6 +93,10 @@
     "npm install html-pdf-node": {
       "name": "htmlpdf node",
       "command": "npm install html-pdf-node"
+    },
+    "npm install @clerk/nextjs@^4.0.0": {
+      "name": "clerk",
+      "command": "npm install @clerk/nextjs@^4.0.0"
     }
   }
 }
