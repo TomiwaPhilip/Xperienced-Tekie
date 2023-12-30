@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
   return (
     <div>
       <h1>Privacy Policy for Xperienced Tekie</h1>
-      <p>Last Updated: [Date]</p>
+      <p>Last Updated: 30th December, 2023</p>
 
       <h2>Welcome to Xperienced Tekie!</h2>
       <p>
@@ -101,7 +101,11 @@ const PrivacyPolicy = () => {
       <h2>Contact Us</h2>
       <p>
         If you have any questions about this Privacy Policy, please contact us
-        at <a href="mailto:contact@email.com">contact@email.com</a>.
+        at{" "}
+        <a href="mailto:info@xperiencedtekiepro.com">
+          info@xperiencedtekiepro.com
+        </a>
+        .
       </p>
 
       <p>Thank you for choosing Xperienced Tekie!</p>
