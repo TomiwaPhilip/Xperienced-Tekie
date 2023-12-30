@@ -1,7 +1,5 @@
 "use client";
 
-import { SignUp } from "@clerk/nextjs";
-
 import Button from "../../shared/button/Button";
 import "./StartDoing.css";
 import AnimateContent from "../../shared/AnimateContent";
