@@ -17,8 +17,8 @@ const Footer = () => {
               <Link href="/">
                 <li>Home</li>
               </Link>
-              <Link href="/">
-                <li>Terms and Conditions</li>
+              <Link href="/privacy-policy">
+                <li>Privacy Policy</li>
               </Link>
             </ul>
           </AnimateContent>

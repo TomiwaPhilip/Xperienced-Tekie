@@ -102,8 +102,8 @@ const PrivacyPolicy = () => {
       <p>
         If you have any questions about this Privacy Policy, please contact us
         at{" "}
-        <a href="mailto:info@xperiencedtekiepro.com">
-          info@xperiencedtekiepro.com
+        <a href="mailto:admin@xperiencedtekiepro.com">
+          admin@xperiencedtekiepro.com
         </a>
         .
       </p>
