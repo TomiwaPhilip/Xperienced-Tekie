@@ -7,15 +7,15 @@ const DevCard = ({ heading, desc }) => {
       <p className="mb-4 md:text-lg">{desc}</p>
       <ol className="list-decimal text-left">
         <li className="mb-4">
-          Complete the assessment now in order to get started quickly. Check
-          your email for the link.
+          Complete the assessment now in order to get started quickly.{" "}
+          <a href="/assessment">Click here to get started now!</a>.
         </li>
         <li className="mb-4">
           Also, join our discord server, where you will get to meet your mentor
           for the first time!
         </li>
         <li className="mb-4">
-          You will also need to pay for your certification two weeks into th
+          You will also need to pay $3 for your certification two weeks into the
           internship
         </li>
       </ol>

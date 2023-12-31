@@ -13,7 +13,7 @@ const StartBuilding = () => {
         <br />
         <div className="leading-loose">
           <AnimateContent>
-            <ul className="md:text-left">
+            <ol className="md:text-left list-decimal">
               <li>Sign up on our website </li>
               <li>
                 Take a 30 minutes Assessment Get selected for the internship
@@ -27,7 +27,7 @@ const StartBuilding = () => {
                 Stay back in the community and continue to enjoy a lifetime
                 support
               </li>
-            </ul>
+            </ol>
           </AnimateContent>
         </div>
 
