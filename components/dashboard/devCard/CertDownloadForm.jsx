@@ -35,7 +35,7 @@ const CertDownloadForm = () => {
 
     // Load the image
     var img = new Image();
-    img.src = "/assets/images/Xperienced Tekie (3).png";
+    img.src = "/assets/images/Xperienced Tekie (4).png";
 
     // Add the image to the document
     doc.addImage(img, 0, 0, 297, 210);
