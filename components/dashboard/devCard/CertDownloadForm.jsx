@@ -6,7 +6,7 @@ import jsPDF from "jspdf";
 const CertDownloadForm = () => {
   const [path, setPath] = useState(null);
 
-  const paths = ["frontend", "backend", "fullstack"];
+  const paths = ["frontend", "backend"];
 
   const { user } = useUser();
 

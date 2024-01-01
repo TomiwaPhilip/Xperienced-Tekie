@@ -80,9 +80,6 @@ const Form = () => {
                 <option value="backend">
                   Backend Web Development with NodeJS
                 </option>
-                <option value="fullstack">
-                  Full Stack Web Development with Next.JS
-                </option>
               </select>
               <label className="block text-gray-700 text-[20px] font-bold">
                 Country

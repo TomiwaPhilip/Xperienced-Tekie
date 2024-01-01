@@ -25,7 +25,7 @@ const MainView = () => {
 
   const userId = user && user.id;
 
-  const paths = ["frontend", "backend", "fullstack"];
+  const paths = ["frontend", "backend"];
 
   const handleNav = (id) => {
     if (id === "project") {
