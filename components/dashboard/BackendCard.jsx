@@ -25,7 +25,7 @@ const BackendCard = () => {
         <li className="mb-4">
           Also, join our discord server, where you will get to meet your mentor
           for the first time!{" "}
-          <a href="https://discord.gg/eaf6GckB" className="text-red-100">
+          <a href="https://discord.gg/pZr9zZPayf" className="text-red-100">
             Click here to join now!
           </a>
         </li>
