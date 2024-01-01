@@ -37,7 +37,8 @@ const BackendCard = () => {
       <strong className="text-red-100">
         {" "}
         Once all these is completed, we will contact you very soon regarding
-        your application.{" "}
+        your application status. Contact admin@xperiencedtekie.pro if you have
+        any issues.{" "}
       </strong>
     </article>
   );
