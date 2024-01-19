@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="">
         <Hero
-        h2 = {"Become a top 1% Backend Web Developer"}
+        h2 = {"Become a top 1% Frontend Web Developer"}
         h3 = {"Get mentored by senior developers who have worked with different tech companies"} 
       />
       <StartDoing />
