@@ -109,6 +109,10 @@
     "npm audit fix": {
       "name": "fix",
       "command": "npm audit fix"
+    },
+    "npm i @vercel/speed-insights": {
+      "name": "speed insight",
+      "command": "npm i @vercel/speed-insights"
     }
   }
 }
