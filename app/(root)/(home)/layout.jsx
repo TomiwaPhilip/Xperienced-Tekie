@@ -1,4 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from '@vercel/analytics/react';
 
 import Nav from "../../../components/shared/Nav";
 import "../../globals.css";
@@ -24,6 +25,7 @@ const RootLayout = ({ children }) => {
               <Footer />
             </AnimateContent>
           </div>
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>

@@ -97,6 +97,18 @@
     "npm install @clerk/nextjs@^4.0.0": {
       "name": "clerk",
       "command": "npm install @clerk/nextjs@^4.0.0"
+    },
+    "npm i @vercel/analytics": {
+      "name": "yea",
+      "command": "npm i @vercel/analytics"
+    },
+    "npm audit": {
+      "name": "audit",
+      "command": "npm audit"
+    },
+    "npm audit fix": {
+      "name": "fix",
+      "command": "npm audit fix"
     }
   }
 }
