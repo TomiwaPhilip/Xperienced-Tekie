@@ -1,4 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Nav from "../../../components/shared/Nav";
 import "../../globals.css";
@@ -21,6 +23,8 @@ const RootLayout = ({ children }) => {
           <div className="">
             <Footer />
           </div>
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </ClerkProvider>
