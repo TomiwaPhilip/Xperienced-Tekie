@@ -9,7 +9,7 @@ import Footer from "../../../components/shared/footer/Footer";
 export const metadata = {
   title: "Xperienced Tekie",
   description:
-    "Real World Experience and Mentorship Internship Platform for the Coding Tekie",
+    "Become a Top 1% Dev | Real World Experience and Mentorship Internship Platform for the Coding Tekie",
 };
 const RootLayout = ({ children }) => {
   return (

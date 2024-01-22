@@ -33,6 +33,17 @@ const FrontendCard = () => {
             You will also need to pay $3 for your certification two weeks into
             the internship. (Note: You don't need to do this right now).
           </li>
+          <li className="mb-4">
+            <strong>Optional but recommended:</strong> Help other developers get
+            mentored and grow! Refer junior developers to sign up and win prizes
+            (up to $100).{" "}
+            <a
+              href="https://www.xperiencedtekie.pro/refer"
+              className="text-red-100"
+            >
+              Click here to refer now!
+            </a>
+          </li>
         </ol>
         <strong className="text-red-100">
           {" "}
