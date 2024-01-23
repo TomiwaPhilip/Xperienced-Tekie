@@ -10,6 +10,7 @@ export default authMiddleware({
     "/",
     "/about",
     "/privacy-policy",
+    "/refer",
     "/frontend-path",
     "/backend-path",
     "/api/user-details",

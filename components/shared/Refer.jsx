@@ -102,7 +102,7 @@ const Refer = () => {
 
       <p className="mt-4">
         {" "}
-        <strong>Note:</strong> There is a prize to win for every person you
+        <strong>Tip:</strong> There is a prize to win for every person you
         refer, so start referring as many as you can.
       </p>
     </div>
