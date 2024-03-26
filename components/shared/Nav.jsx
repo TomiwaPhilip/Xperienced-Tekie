@@ -4,13 +4,9 @@ import Link from "next/link";
 import X from "../../public/assets/images/X.png";
 import Image from "next/image";
 import { useState } from "react";
-import { useUser } from "@clerk/nextjs";
 
 export default function PrimaryNavbar() {
-  const [showDropDown, setShowDropDown] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
-
-  const { user } = useUser();
 
   return (
     <nav className="flex flex-col">
@@ -25,60 +21,12 @@ export default function PrimaryNavbar() {
             <Link href="/">
               <li className="cursor-pointer">Home</li>
             </Link>
-            <li
-              onClick={() => setShowDropDown(!showDropDown)}
-              className="flex items-center cursor-pointer"
-            >
-              Internship Path
-              <span>
-                <svg
-                  width="35"
-                  height="40"
-                  viewBox="0 0 41 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.6784 13.8215C11.0276 13.1706 9.97228 13.1706 9.32141 13.8215C8.67053 14.4724 8.67053 15.5276 9.32141 16.1785L19.3214 26.1785C19.9723 26.8294 21.0276 26.8294 21.6784 26.1785L31.6784 16.1785C32.3293 15.5276 32.3293 14.4724 31.6784 13.8215C31.0276 13.1706 29.9723 13.1706 29.3214 13.8215L20.4999 22.643L11.6784 13.8215Z"
-                    fill="#2D3648"
-                  />
-                </svg>
-              </span>
-            </li>
-            {user ? (
-              <Link href="/dashboard">
-                <li className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer">
-                  Dashboard
-                </li>
-              </Link>
-            ) : (
-              <Link href="/sign-in">
+              <Link href="https://dash.xperiencedtekie.pro">
                 <li className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer">
                   Sign In
                 </li>
               </Link>
-            )}
           </ul>
-          {showDropDown && (
-            <ul className="absolute z-20 top-10 left-10 bg-blue-900 text-white flex flex-col gap-2">
-              <Link href="/frontend-path">
-                <li
-                  onClick={() => setShowDropDown(!showDropDown)}
-                  className="cursor-pointer hover:bg-blue-950 p-2"
-                >
-                  Frontend Internship
-                </li>
-              </Link>
-              <Link href="/backend-path">
-                <li
-                  onClick={() => setShowDropDown(!showDropDown)}
-                  className="cursor-pointer hover:bg-blue-950 p-2"
-                >
-                  Backend Internship
-                </li>
-              </Link>
-            </ul>
-          )}
         </div>
         <div className="md:hidden" onClick={() => setMobileNav(!mobileNav)}>
           <svg
@@ -110,9 +58,6 @@ export default function PrimaryNavbar() {
       >
         {mobileNav && (
           <MobileNav
-            user={user}
-            showDropDown={showDropDown}
-            setShowDropDown={setShowDropDown}
             onClick={() => setMobileNav(!mobileNav)}
           />
         )}
@@ -121,7 +66,7 @@ export default function PrimaryNavbar() {
   );
 }
 
-function MobileNav({ user, showDropDown, setShowDropDown, onClick }) {
+function MobileNav({ onClick }) {
   return (
     <div className="relative w-[250px] py-5 bg-blue-950 flex flex-col gap-5 font-semibold">
       <ul className="flex flex-col gap-4 items-center ">
@@ -133,57 +78,7 @@ function MobileNav({ user, showDropDown, setShowDropDown, onClick }) {
             Home
           </li>
         </Link>
-        <li
-          onClick={() => setShowDropDown(!showDropDown)}
-          className="flex items-center cursor-pointer px-5 text-center hover:bg-blue-700 text-white"
-        >
-          Internship Path
-          <span>
-            <svg
-              width="35"
-              height="40"
-              viewBox="0 0 41 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.6784 13.8215C11.0276 13.1706 9.97228 13.1706 9.32141 13.8215C8.67053 14.4724 8.67053 15.5276 9.32141 16.1785L19.3214 26.1785C19.9723 26.8294 21.0276 26.8294 21.6784 26.1785L31.6784 16.1785C32.3293 15.5276 32.3293 14.4724 31.6784 13.8215C31.0276 13.1706 29.9723 13.1706 29.3214 13.8215L20.4999 22.643L11.6784 13.8215Z"
-                fill="#FFFFFF"
-              />
-            </svg>
-          </span>
-        </li>
-        {showDropDown && (
-          <ul className="text-blue-200 flex flex-col gap-2">
-            <Link href="/frontend-path">
-              <li
-                onClick={() => setShowDropDown(!showDropDown)}
-                className="cursor-pointer  hover:bg-blue-700 p-2"
-              >
-                Frontend Internship
-              </li>
-            </Link>
-            <Link href="backend-path">
-              <li
-                onClick={() => setShowDropDown(!showDropDown)}
-                className="cursor-pointer hover:bg-blue-700 p-2"
-              >
-                Backend Internship
-              </li>
-            </Link>
-          </ul>
-        )}
-        {user ? (
-          <Link href="/dashboard">
-            <li
-              onClick={onClick}
-              className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer"
-            >
-              Dashboard
-            </li>
-          </Link>
-        ) : (
-          <Link href="/sign-in">
+          <Link href="https://dash.xperiencedtekie.pro">
             <li
               onClick={onClick}
               className="rounded-lg bg-blue-950 text-white p-2 hover:bg-blue-700 cursor-pointer"
@@ -191,7 +86,6 @@ function MobileNav({ user, showDropDown, setShowDropDown, onClick }) {
               Sign In
             </li>
           </Link>
-        )}
       </ul>
     </div>
   );

@@ -7,26 +7,21 @@ const StartBuilding = () => {
       <div className="md:px-20 px-10">
         <AnimateContent>
           <h2 className="text-center px-5">
-            Follow our Zero to Hero framework
+            Get started in 3 easy steps
           </h2>
         </AnimateContent>
         <br />
         <div className="leading-loose">
           <AnimateContent>
             <ol className="md:text-left list-decimal">
-              <li>Sign up on our website </li>
+              <li>Sign up on our website and login to your dashboard</li>
               <li>
-                Take a 30 minutes Assessment Get selected for the internship
+                Complete your 30 minutes assessment
               </li>
               <li>
-                Start collaborating on a startup Get mentorship and build real
-                world products
+                Pay your certification and commitment fee (the program is free)!
               </li>
-              <li> Complete internship and get a paid certificate </li>
-              <li>
-                Stay back in the community and continue to enjoy a lifetime
-                support
-              </li>
+              <li> Start your mentorship journey by April 15, 2024 </li>
             </ol>
           </AnimateContent>
         </div>
@@ -35,7 +30,7 @@ const StartBuilding = () => {
         <AnimateContent>
           <Button
             params={"btn-signup"}
-            name={"Sign Up Now"}
+            name={"Join the Next Cohort"}
             svg={
               <svg
                 className="inline"
@@ -72,7 +67,7 @@ const StartBuilding = () => {
                 </g>
               </svg>
             }
-            link={"/sign-up"}
+            link={"https://dash.xperiencedtekie.pro"}
           />
         </AnimateContent>
       </div>

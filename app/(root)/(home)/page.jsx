@@ -18,9 +18,9 @@ const Home = () => {
   return (
     <div className="">
       <Hero
-        h2={"Become a top 1% Developer"}
+        h2={"Join 3 months intensive Software Development Mentorship Program by April 15, 2024"}
         h3={
-          "Get mentored by senior developers who have worked with different tech companies."
+          "Engage in a 3 months intensive mentorship from senior developers who have worked with big tech companies. Master your tech skills and get the job you want!"
         }
       />
 

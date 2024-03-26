@@ -19,12 +19,12 @@ const GetingReady = () => {
             </p>
           </AnimateContent>
           <AnimateContent>
-            <p>Read the FAQs below to learn more about the internship</p>
+            <p>Read the FAQs below to learn more about the program!</p>
           </AnimateContent>
           <AnimateContent>
             <Button
               params={"btn-signup"}
-              name={"Sign Up Now"}
+              name={"Join the Next Cohort"}
               svg={
                 <svg
                   className="inline"
@@ -61,7 +61,7 @@ const GetingReady = () => {
                   </g>
                 </svg>
               }
-              link={"/sign-up"}
+              link={"https://dash.xperiencedtekie.pro"}
             />
           </AnimateContent>
         </div>

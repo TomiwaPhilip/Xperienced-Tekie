@@ -10,29 +10,27 @@ const GetCertified = () => {
       <div className="md:w-[500px] content-width get-certified-left">
         <AnimateContent>
           <h2 className="text-5xl text-blue-950 mb-5">
-            Be a Certified Developer
+            Job Opportunities
           </h2>
         </AnimateContent>
         <AnimateContent>
           <p>
-            Receive a paid certificate at the end of the one month internship.
+            Get the opportunity to be connected to startups looking for software engineers!
           </p>
         </AnimateContent>
         <AnimateContent>
           <p>
-            Showcase your skills to potential employers, get hired and continue
-            to receive our community support.
+            Showcase your completion certificate to companies and get hired.
           </p>
         </AnimateContent>
         <AnimateContent>
           <p>
-            Pay for certificate only if you are satisfied with your internship
-            experience.
+            Receive career guidance from senior devs through our workshops.
           </p>
         </AnimateContent>
         <AnimateContent>
           <Button
-            name={"Sign Up Now"}
+            name={"Join the Next Cohort"}
             svg={
               <svg
                 className="inline"
@@ -69,7 +67,7 @@ const GetCertified = () => {
                 </g>
               </svg>
             }
-            link={"/sign-up"}
+            link={"https://dash.xperiencedtekie.pro"}
           />
         </AnimateContent>
       </div>

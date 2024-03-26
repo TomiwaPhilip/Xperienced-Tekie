@@ -11,11 +11,11 @@ const Paths = ({ color, backgroundColor, heading, description }) => {
       className="w-[250px] p-5 rounded-lg flex flex-col items-center md:w-[300px] lg:w-[400px] "
       style={style}
     >
-      <h3 className="text-3xl mb-5">{heading}</h3>
+      <h3 className="text-3xl mb-5 font-bold">{heading}</h3>
       <p>{description}</p>
       <Button
         params={"btn-signup"}
-        name={"Sign Up Now"}
+        name={"Join the Next Cohort"}
         svg={
           <svg
             className="inline"
@@ -52,7 +52,7 @@ const Paths = ({ color, backgroundColor, heading, description }) => {
             </g>
           </svg>
         }
-        link={"/sign-up"}
+        link={"https://dash.xperiencedtekie.pro"}
       />
     </div>
   );

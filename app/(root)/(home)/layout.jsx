@@ -10,7 +10,7 @@ import AnimateContent from "../../../components/shared/AnimateContent";
 export const metadata = {
   title: "Xperienced Tekie",
   description:
-    "Become a Top 1% Dev | Real World Experience and Mentorship Internship Platform for the Coding Tekie",
+    "Become a Top 1% Dev | Real World Experience and Mentorship Platform for the Coding Tekie",
 };
 const RootLayout = ({ children }) => {
   return (

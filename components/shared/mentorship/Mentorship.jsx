@@ -10,23 +10,23 @@ const Mentorship = () => {
       <div className="content-width mentorship-left mb-10 md:w-1/2 md:pr-10">
         <AnimateContent>
           <h2 className="heading-2 text-blue-950 pt-16 pb-3">
-            Get Career Guidance. <br /> Avoid Frustration.
+            Software Development has changed
           </h2>
         </AnimateContent>
         <AnimateContent>
           <p>
-            We have experienced the frustration of being a junior developer.
+            Let us guide you on how to craft software for businesses solutions.
           </p>
         </AnimateContent>
         <AnimateContent>
           <p>
-            Receive a person-to-person support and career guidance from senior
-            developers who have gotten to where you want to be.
+            Get familiar with tips and tricks used by senior developers to create good 
+            software and  ship them to the real world!
           </p>
         </AnimateContent>
         <AnimateContent>
           <Button
-            name={"Sign Up Now"}
+            name={"Join the Next Cohort"}
             svg={
               <svg
                 className="inline"
@@ -63,7 +63,7 @@ const Mentorship = () => {
                 </g>
               </svg>
             }
-            link={"/sign-up"}
+            link={"https://dash.xperiencedtekie.pro"}
           />
         </AnimateContent>
       </div>

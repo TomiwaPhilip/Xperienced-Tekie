@@ -8,15 +8,15 @@ import AnimateContent from "../AnimateContent";
 const FAQS = () => {
   const questions = [
     {
-      question: "How long is the internship duration?",
-      answer: "The Internship is scheduled for 3 months",
+      question: "How long is the Program duration?",
+      answer: "The program is scheduled for 3 months",
     },
     {
-      question: "How much is the certificate payment?",
-      answer: "$3 or its equivalent in your local currency",
+      question: "How much is the certificate and commitment fee payment?",
+      answer: "$6 or its equivalent in your local currency",
     },
     {
-      question: "How do I pay for the certificate?",
+      question: "How do I pay for the certificate and commitment fee?",
       answer: "Pay online via the flutterwave wave link on your dashboard",
     },
     {
@@ -29,22 +29,22 @@ const FAQS = () => {
     },
     {
       question: "How do I get help if I am stuck on any project?",
-      answer: "Contact your assigned mentor",
+      answer: "Contact your assigned mentor and team leader",
     },
     {
-      question: "Can I connect with anyone during the internship?",
+      question: "Can I connect with anyone during the program?",
       answer:
         "Yes. You can connect with your team working on the project with you",
     },
     {
-      question: "Why is the certificate fee so cheap?",
-      answer: "For everyone to be able to afford",
+      question: "Why is the program free?",
+      answer: "For everyone to be able to participate",
     },
     {
       question:
-        "Why do I need to pay for the certificate if the internship is free?",
+        "Why do I need to pay the commitment and certification fee if the program is free?",
       answer:
-        "The certificate serves also as a testimonial that you interned with us",
+        "This will help us evaluate how is serious you are about joining the mentorship program",
     },
   ];
 

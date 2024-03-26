@@ -14,14 +14,8 @@ const Hero = ({ h2, h3 }) => {
           <h3 className="text-xl">{h3}</h3>
         </AnimateContent>
         <AnimateContent>
-          <p className="text-xl">
-            Join an internship that gives you real world xperience, mentorship,
-            career guidance, a lifetime community support and certfication.
-          </p>
-        </AnimateContent>
-        <AnimateContent>
           <Button
-            name={"Sign Up Now"}
+            name={"Join the Next Cohort"}
             svg={
               <svg
                 className="inline"
@@ -58,7 +52,7 @@ const Hero = ({ h2, h3 }) => {
                 </g>
               </svg>
             }
-            link={"/sign-up"}
+            link={"https://dash.xperiencedtekie.pro"}
           />
         </AnimateContent>
       </div>

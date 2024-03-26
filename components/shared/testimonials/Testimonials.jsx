@@ -11,27 +11,30 @@ const Testimonials = () => {
       name: "Ridwan AbdulGaniyu",
       testimony:
         "What frustrated me then was that there was no mentorship for me... and Xperienced Tekie brought the solutions to me with experienced nebtorship which solves my problem. Life feels better and full of opportunies now that my problem is getting solved.",
+      bgColor: "#4BA3C5"
     },
     {
-      name: "Fridan Landry",
+      name: "Friday Landry",
       testimony:
         "Actually they did put me on the way, and that facilitate my journey to mastering JavaScript. I see a great developer rising in me!",
-    },
+        bgColor: "#F2E9EB"
+      },
     {
       name: "Lawson Ebere",
       testimony:
         "If feels good knowing that my quest of being a developer is getting solved. Thanks to Xperienced Tekie!",
-    },
+        bgColor: "#EB9ECC"
+      },
   ];
 
   return (
     <div className="relative testimonials-section">
       <div className="testimonials-left">
         <AnimateContent>
-          <h2 className="heading-2 text-center">See what our interns said</h2>
+          <h2 className="heading-2 text-center">Don't take Our word for it</h2>
         </AnimateContent>
         <br /> <br />
-        <div className="flex flex-wrap justify-center mx-[40px]">
+        <div className="flex flex-wrap justify-center gap-5 mx-[40px]">
           {testimonials.map((testimonial, index) => (
             <TestimonialsCard key={index} {...testimonial} />
           ))}
@@ -43,7 +46,7 @@ const Testimonials = () => {
         <div className="text-center">
           <Button
             params={"btn-signup"}
-            name={"Sign Up Now"}
+            name={"Read More Reviews"}
             svg={
               <svg
                 className="inline"
@@ -80,7 +83,7 @@ const Testimonials = () => {
                 </g>
               </svg>
             }
-            link={"/sign-up"}
+            link={"/testimonials"}
           />
         </div>
       </AnimateContent>

@@ -26,20 +26,6 @@ const Footer = () => {
         <div>
           <AnimateContent>
             <h3 className="font-bold text-2xl text-blue-950">
-              Internship Paths
-            </h3>
-            <p className="text-lg">
-              <Link href="/frontend-path">
-                Frontend Development Internship{" "}
-              </Link>{" "}
-              <br />
-              <Link href="/backend-path"> Backend Development Internship </Link>
-            </p>
-          </AnimateContent>
-        </div>
-        <div>
-          <AnimateContent>
-            <h3 className="font-bold text-2xl text-blue-950">
               Contact or follow us
             </h3>
             <p className="text-lg">
@@ -64,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <AnimateContent>
-        <p className="text-blue-950">All rights reserved. Copyright 2023.</p>
+        <p className="text-blue-950">All rights reserved. Copyright 2024.</p>
       </AnimateContent>
     </footer>
   );

@@ -10,29 +10,27 @@ const StartDoing = () => {
       <div className="text-white text-center space-y-5 px-6">
         <AnimateContent>
           <h2 className="md:text-[50px] text-[40px] font-extrabold">
-            Master your tech skill
+            Go from zero to pro
           </h2>
         </AnimateContent>
         <br />
         <AnimateContent>
-          <p className="text-[30px] font-bold">Build real world projects.</p>
+          <p className="text-[30px] font-bold">Build real products that people are going to use.</p>
         </AnimateContent>
         <AnimateContent>
           <p className="text-2xl md:px-6">
-            Work collaboratively on a fast-paced startup. Get code reviews on
-            pull requests and receive help when you get stuck.
+            Collaborate and ship products with other developers.
           </p>
         </AnimateContent>
         <AnimateContent>
           <p className="text-2xl md:px-6">
-            Get feedbacks from senior developers who have the experience you are
-            looking for.
+            Get realtime feedback for your code and get  help when stuck!
           </p>
         </AnimateContent>
         <br /> <br />
         <AnimateContent>
           <Button
-            name={"Sign Up Now"}
+            name={"Join the Next Cohort"}
             svg={
               <svg
                 className="inline"
@@ -69,7 +67,7 @@ const StartDoing = () => {
                 </g>
               </svg>
             }
-            link={"/sign-up"}
+            link={"https://dash.xperiencedtekie.pro"}
           />
         </AnimateContent>
       </div>

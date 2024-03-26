@@ -7,7 +7,7 @@ const DevPath = () => {
   return (
     <div className="dev-path bg-blue-950 flex flex-col items-center gap-5 pt-20 pb-20">
       <AnimateContent>
-        <h2>Every developer stack is accepted</h2>
+        <h2>Your developer stack is available</h2>
       </AnimateContent>
       <br />
       <div className="flex flex-col gap-5 sm:gap-24 md:flex-row md:justify-between">
@@ -15,22 +15,22 @@ const DevPath = () => {
           <Paths
             color="white"
             backgroundColor="#4BA3C5"
-            heading="Frontend Web Development Internship with ReactJs"
-            description="Our frontend Web development internship with ReactJS provides you with real world experience with skills that would make you job ready!"
+            heading="Frontend or Backend Engineer Path with ReactJS and NodeJS"
+            description="The frontend and backend engineer path with React JS and Node JS helps you to master one of the stacks. You can choose to either go for the frontend or backend path. You must know the basics of either React JS or Express JS."
           />
         </AnimateContent>
         <AnimateContent>
           <Paths
             color="#000"
             backgroundColor="#fff"
-            heading="Backend Web Development Internship with NodeJS"
-            description="Our backend Web development internship with NodeJS provides you with real world experience with skills that would make you job ready!"
+            heading="Fullstack Enginner Path  with NodeJS"
+            description="The full stack engineer path enables you to master both frontend and backend through our guidance. In the programme you will have the chance to switch to backend or frontend at anytime. You must know the basics of both frontend and backend."
           />
         </AnimateContent>
       </div>
       <AnimateContent>
         <Button
-          name={"Sign Up Now"}
+          name={"Join the Next Cohort"}
           svg={
             <svg
               className="inline"
@@ -67,7 +67,7 @@ const DevPath = () => {
               </g>
             </svg>
           }
-          link={"/sign-up"}
+          link={"https://dash.xperiencedtekie.pro"}
         />
       </AnimateContent>
     </div>
