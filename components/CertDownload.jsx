@@ -27,7 +27,7 @@ const CertDownload = () => {
     <div>
       {status === null && <NullPayment />}
       {status === "failed" && <FailedPayment />}
-      {status === "success" && <CertDownloadForm />}
+      {status === "successful" && <CertDownloadForm />}
     </div>
   );
 };
