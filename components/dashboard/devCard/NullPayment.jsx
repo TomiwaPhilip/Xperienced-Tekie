@@ -22,13 +22,9 @@ const NullPayment = () => {
 
   let countryLink = "";
   if (location === "Nigeria") {
-    countryLink = "https://flutterwave.com/pay/sjp2hulwnv08";
-  } else if (location === "Kenya") {
-    countryLink = "https://flutterwave.com/pay/eq39mcs3qwor";
+    countryLink = "https://flutterwave.com/pay/ncg78nfv4z3s";
   } else if (location === "Ghana") {
-    countryLink = "https://flutterwave.com/pay/eq39mcs3qwor";
-  } else if (location === "Egypt") {
-    countryLink = "https://flutterwave.com/pay/eq39mcs3qwor";
+    countryLink = "https://flutterwave.com/pay/kl5bdfj9gesu";
   } else {
     countryLink = "https://flutterwave.com/pay/zauiapy1p0xb";
   }
