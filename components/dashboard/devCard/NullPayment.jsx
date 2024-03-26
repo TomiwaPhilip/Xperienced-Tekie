@@ -22,7 +22,7 @@ const NullPayment = () => {
 
   let countryLink = "";
   if (location === "Nigeria") {
-    countryLink = "https://flutterwave.com/pay/eq39mcs3qwor";
+    countryLink = "https://flutterwave.com/pay/sjp2hulwnv08";
   } else if (location === "Kenya") {
     countryLink = "https://flutterwave.com/pay/eq39mcs3qwor";
   } else if (location === "Ghana") {
