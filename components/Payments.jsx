@@ -27,7 +27,7 @@ const Payments = () => {
     <div>
       {status === null && <NullPayment />}
       {status === "failed" && <FailedPayment />}
-      {status === "success" && <SuccessPayment />}
+      {status === "successful" && <SuccessPayment />}
     </div>
   );
 };
