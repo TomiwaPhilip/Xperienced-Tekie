@@ -15,16 +15,16 @@ const DevPath = () => {
           <Paths
             color="white"
             backgroundColor="#4BA3C5"
-            heading="Frontend or Backend Engineer Path with ReactJS and NodeJS"
-            description="The frontend and backend engineer path with React JS and Node JS helps you to master one of the stacks. You can choose to either go for the frontend or backend path. You must know the basics of either React JS or Express JS."
+            heading="For the Frontend Developer"
+            description="Harness the power of ReactJS and NextJs to build fullstack serverless applications that would be used in the real world. All you need is a basic knowledge of ReactJS and NextJS."
           />
         </AnimateContent>
         <AnimateContent>
           <Paths
             color="#000"
             backgroundColor="#fff"
-            heading="Fullstack Enginner Path  with NodeJS"
-            description="The full stack engineer path enables you to master both frontend and backend through our guidance. In the programme you will have the chance to switch to backend or frontend at anytime. You must know the basics of both frontend and backend."
+            heading="For the Fullstack Developer"
+            description="Master NextJs to build and deploy serverless web applications and become a designer of scaling products. All you need is a basic knowledge of NextJS."
           />
         </AnimateContent>
       </div>

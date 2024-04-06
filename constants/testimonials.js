@@ -17,6 +17,12 @@ const testimonials = [
         "If feels good knowing that my quest of being a developer is getting solved. Thanks to Xperienced Tekie!",
         bgColor: "#EB9ECC"
       },
+      {
+        name: "Summer",
+        testimony:
+          "I had the best moment of my tech journey! The collaboration with my teammates, new experiences, up-building challenges, & lots more! The internship was an eye opener in some fields I'm lacking. Thanks to the founder for such an opportunity.",
+          bgColor: "#4BA3C5"
+        },
   ];
 
   export default testimonials;
